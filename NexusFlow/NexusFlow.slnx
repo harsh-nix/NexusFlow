@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="src/NexusFlow.API/NexusFlow.API.csproj" />
+  <Project Path="src/NexusFlow.Application/NexusFlow.Application.csproj" />
+  <Project Path="src/NexusFlow.Domain/NexusFlow.Domain.csproj" />
+  <Project Path="src/NexusFlow.Infrastructure/NexusFlow.Infrastructure.csproj" />
+</Solution>

@@ -1,0 +1,11 @@
+C:\Users\Harsh\Documents\Full_Stack\03_Projects\NexusFlow\NexusFlow\src\NexusFlow.Domain\bin\Debug\net10.0\NexusFlow.Domain.deps.json
+C:\Users\Harsh\Documents\Full_Stack\03_Projects\NexusFlow\NexusFlow\src\NexusFlow.Domain\bin\Debug\net10.0\NexusFlow.Domain.dll
+C:\Users\Harsh\Documents\Full_Stack\03_Projects\NexusFlow\NexusFlow\src\NexusFlow.Domain\bin\Debug\net10.0\NexusFlow.Domain.pdb
+C:\Users\Harsh\Documents\Full_Stack\03_Projects\NexusFlow\NexusFlow\src\NexusFlow.Domain\obj\Debug\net10.0\NexusFlow.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Harsh\Documents\Full_Stack\03_Projects\NexusFlow\NexusFlow\src\NexusFlow.Domain\obj\Debug\net10.0\NexusFlow.Domain.AssemblyInfoInputs.cache
+C:\Users\Harsh\Documents\Full_Stack\03_Projects\NexusFlow\NexusFlow\src\NexusFlow.Domain\obj\Debug\net10.0\NexusFlow.Domain.AssemblyInfo.cs
+C:\Users\Harsh\Documents\Full_Stack\03_Projects\NexusFlow\NexusFlow\src\NexusFlow.Domain\obj\Debug\net10.0\NexusFlow.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Harsh\Documents\Full_Stack\03_Projects\NexusFlow\NexusFlow\src\NexusFlow.Domain\obj\Debug\net10.0\NexusFlow.Domain.dll
+C:\Users\Harsh\Documents\Full_Stack\03_Projects\NexusFlow\NexusFlow\src\NexusFlow.Domain\obj\Debug\net10.0\refint\NexusFlow.Domain.dll
+C:\Users\Harsh\Documents\Full_Stack\03_Projects\NexusFlow\NexusFlow\src\NexusFlow.Domain\obj\Debug\net10.0\NexusFlow.Domain.pdb
+C:\Users\Harsh\Documents\Full_Stack\03_Projects\NexusFlow\NexusFlow\src\NexusFlow.Domain\obj\Debug\net10.0\ref\NexusFlow.Domain.dll
