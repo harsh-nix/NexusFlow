@@ -168,3 +168,4 @@ C:\Users\Harsh\Documents\Full_Stack\03_Projects\NexusFlow\NexusFlow\src\NexusFlo
 C:\Users\Harsh\Documents\Full_Stack\03_Projects\NexusFlow\NexusFlow\src\NexusFlow.API\bin\Debug\net10.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\Harsh\Documents\Full_Stack\03_Projects\NexusFlow\NexusFlow\src\NexusFlow.API\bin\Debug\net10.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\Harsh\Documents\Full_Stack\03_Projects\NexusFlow\NexusFlow\src\NexusFlow.API\bin\Debug\net10.0\BCrypt-Net-Next.dll
+C:\Users\Harsh\Documents\Full_Stack\03_Projects\NexusFlow\NexusFlow\src\NexusFlow.API\obj\Debug\net10.0\NexusFlow.API.sourcelink.json

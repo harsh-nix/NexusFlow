@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-using NexusFlow.Application.DTOs.Common;
+﻿using NexusFlow.Application.DTOs.Common;
 using NexusFlow.Application.DTOs.Tasks;
 using NexusFlow.Application.Services.Interfaces;
 using NexusFlow.Domain.Entities;
+using NexusFlow.Domain.Enums;
 using NexusFlow.Domain.Interfaces;
 using TaskStatus = NexusFlow.Domain.Enums.TaskStatus;
 
@@ -14,10 +11,14 @@ namespace NexusFlow.Application.Services
     public class TaskService : ITaskService
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly INotificationService _notificationService;
 
-        public TaskService(IUnitOfWork unitOfWork)
+        public TaskService(
+            IUnitOfWork unitOfWork,
+            INotificationService notificationService)
         {
             _unitOfWork = unitOfWork;
+            _notificationService = notificationService;
         }
 
         public async Task<ApiResponse<TaskDto>> CreateAsync(
@@ -37,7 +38,6 @@ namespace NexusFlow.Application.Services
             await _unitOfWork.Repository<ProjectTask>().AddAsync(task);
             await _unitOfWork.SaveChangesAsync();
 
-            // Assign users
             foreach (var assigneeId in dto.AssigneeIds)
             {
                 await _unitOfWork.Repository<TaskAssignee>().AddAsync(new TaskAssignee
@@ -46,6 +46,12 @@ namespace NexusFlow.Application.Services
                     UserId = assigneeId,
                     CreatedBy = userId
                 });
+
+                await _notificationService.CreateNotificationAsync(
+                    assigneeId,
+                    "New Task Assigned",
+                    $"You have been assigned to task: {task.Title}",
+                    NotificationType.TaskAssigned);
             }
 
             if (dto.AssigneeIds.Any())

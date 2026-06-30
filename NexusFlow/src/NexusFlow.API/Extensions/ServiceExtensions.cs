@@ -93,6 +93,8 @@ namespace NexusFlow.API.Extensions
             services.AddScoped<IJwtTokenService, JwtTokenService>();
             services.AddScoped<IProjectService, ProjectService>();
             services.AddScoped<ITaskService, TaskService>();
+            services.AddScoped<ICommentService, CommentService>();
+            services.AddScoped<INotificationService, NotificationService>();
         }
     }
 }
