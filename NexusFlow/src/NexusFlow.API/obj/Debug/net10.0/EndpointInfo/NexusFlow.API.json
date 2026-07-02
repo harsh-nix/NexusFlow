@@ -227,6 +227,18 @@
         }
       }
     },
+    "/api/Dashboard": {
+      "get": {
+        "tags": [
+          "Dashboard"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Notifications": {
       "get": {
         "tags": [
@@ -780,6 +792,9 @@
     },
     {
       "name": "Comments"
+    },
+    {
+      "name": "Dashboard"
     },
     {
       "name": "Notifications"

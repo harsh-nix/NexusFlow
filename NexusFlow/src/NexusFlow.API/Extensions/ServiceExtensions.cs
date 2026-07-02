@@ -11,6 +11,7 @@ using NexusFlow.Infrastructure.Services;
 using NexusFlow.Infrastructure.UnitOfWork;
 using System.Text;
 
+
 namespace NexusFlow.API.Extensions
 {
     public static class ServiceExtensions
@@ -95,6 +96,7 @@ namespace NexusFlow.API.Extensions
             services.AddScoped<ITaskService, TaskService>();
             services.AddScoped<ICommentService, CommentService>();
             services.AddScoped<INotificationService, NotificationService>();
+            services.AddScoped<IDashboardService, DashboardService>();
         }
     }
 }
