@@ -1,10 +1,19 @@
+using AutoMapper;
+using FluentValidation;
 using NexusFlow.API.Extensions;
+using NexusFlow.API.Filters;
 using NexusFlow.API.Middleware;
+using NexusFlow.Application.Mappings;
+using NexusFlow.Application.Validators.Auth;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // ── Services ──────────────────────────────────────
-builder.Services.AddControllers();
+builder.Services.AddScoped<ValidationFilter>();
+builder.Services.AddControllers(options =>
+{
+    options.Filters.AddService<ValidationFilter>();
+});
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApi();
 
@@ -14,8 +23,15 @@ builder.Services.AddCorsPolicy(builder.Configuration);
 builder.Services.AddRepositories();
 builder.Services.AddApplicationServices();
 
-// AutoMapper - will register when profiles are created
-// builder.Services.AddAutoMapper(typeof(Program));
+// AutoMapper — scans the Application assembly for all Profile classes
+// (ProjectProfile, TaskProfile, CommentProfile, NotificationProfile, UserProfile, AuthProfile)
+// NOTE: since AutoMapper v15, every AddAutoMapper overload requires the
+// Action<IMapperConfigurationExpression> parameter first — passing just the
+// assembly (no cfg lambda) no longer compiles.
+builder.Services.AddAutoMapper(cfg => { }, typeof(ProjectProfile).Assembly);
+
+// FluentValidation — scans the Application assembly for all AbstractValidator<T> classes
+builder.Services.AddValidatorsFromAssemblyContaining<RegisterRequestDtoValidator>();
 
 // ── Pipeline ──────────────────────────────────────
 var app = builder.Build();
