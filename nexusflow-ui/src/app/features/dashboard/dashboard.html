@@ -1,0 +1,37 @@
+<mat-toolbar color="primary">
+  <span>NexusFlow</span>
+  <a mat-button routerLink="/projects" class="nav-link">Projects</a>
+  <span class="spacer"></span>
+  @if (authService.currentUser(); as user) {
+    <span class="user-name">{{ user.fullName }} ({{ user.role }})</span>
+  }
+  <button mat-icon-button (click)="onLogout()" aria-label="Logout">
+    <mat-icon>logout</mat-icon>
+  </button>
+</mat-toolbar>
+
+<div class="dashboard-container">
+  @if (isLoading()) {
+    <p>Loading dashboard...</p>
+  } @else if (errorMessage()) {
+    <p class="error-text">{{ errorMessage() }}</p>
+  } @else if (stats(); as s) {
+    <div class="stats-grid">
+      <mat-card><mat-card-title>{{ s.totalProjects }}</mat-card-title><mat-card-subtitle>Total Projects</mat-card-subtitle></mat-card>
+      <mat-card><mat-card-title>{{ s.activeProjects }}</mat-card-title><mat-card-subtitle>Active Projects</mat-card-subtitle></mat-card>
+      <mat-card><mat-card-title>{{ s.totalTasks }}</mat-card-title><mat-card-subtitle>Total Tasks</mat-card-subtitle></mat-card>
+      <mat-card><mat-card-title>{{ s.completedTasks }}</mat-card-title><mat-card-subtitle>Completed Tasks</mat-card-subtitle></mat-card>
+      <mat-card><mat-card-title>{{ s.inProgressTasks }}</mat-card-title><mat-card-subtitle>In Progress</mat-card-subtitle></mat-card>
+      <mat-card><mat-card-title>{{ s.unreadNotifications }}</mat-card-title><mat-card-subtitle>Unread Notifications</mat-card-subtitle></mat-card>
+    </div>
+
+    <h3>Recent Activity</h3>
+    @for (activity of s.recentActivities; track activity.title) {
+      <mat-card class="activity-item">
+        <strong>{{ activity.type }}:</strong> {{ activity.title }}
+      </mat-card>
+    } @empty {
+      <p>No recent activity yet.</p>
+    }
+  }
+</div>

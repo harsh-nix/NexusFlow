@@ -97,6 +97,7 @@ namespace NexusFlow.API.Extensions
             services.AddScoped<ICommentService, CommentService>();
             services.AddScoped<INotificationService, NotificationService>();
             services.AddScoped<IDashboardService, DashboardService>();
+            services.AddScoped<IUserService, UserService>();
         }
     }
 }

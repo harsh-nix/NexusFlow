@@ -1,0 +1,15 @@
+.page-container { padding: 24px; }
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+.project-card { padding: 8px; }
+.meta { color: #666; font-size: 13px; }
+.error-text { color: #d32f2f; }

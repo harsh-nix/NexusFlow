@@ -1,0 +1,15 @@
+.spacer { flex: 1 1 auto; }
+.user-name { margin-right: 16px; font-size: 14px; }
+.dashboard-container { padding: 24px; }
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.activity-item { padding: 12px; margin-bottom: 8px; }
+.error-text { color: #d32f2f; }
+.nav-link {
+  color: white;
+  margin-left: 24px;
+}

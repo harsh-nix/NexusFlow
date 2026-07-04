@@ -1,0 +1,82 @@
+<div class="page-container">
+  <div class="page-header">
+    <div>
+      <a routerLink="/projects" class="back-link">&larr; Back to Projects</a>
+      <h2>Tasks</h2>
+    </div>
+    <a mat-raised-button color="primary" [routerLink]="['/projects', projectId, 'tasks', 'new']">+ New Task</a>
+  </div>
+
+  @if (isLoading()) {
+    <p>Loading tasks...</p>
+  } @else if (errorMessage()) {
+    <p class="error-text">{{ errorMessage() }}</p>
+  } @else if (tasks().length === 0) {
+    <p>No tasks yet for this project. Create the first one above.</p>
+  } @else {
+    <div class="tasks-grid">
+      @for (task of tasks(); track task.id) {
+        <mat-card class="task-card">
+          <mat-card-header>
+            <mat-card-title>{{ task.title }}</mat-card-title>
+            <mat-card-subtitle>
+              <mat-chip>{{ task.priority }}</mat-chip>
+            </mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <p>{{ task.description || 'No description provided.' }}</p>
+            @if (task.dueDate) {
+              <p class="meta">Due: {{ task.dueDate | date: 'mediumDate' }}</p>
+            }
+
+            <mat-form-field appearance="outline" class="status-select">
+              <mat-label>Status</mat-label>
+              <mat-select
+                [value]="statusStringToEnum(task.status)"
+                (selectionChange)="onStatusChange(task, $event.value)"
+              >
+                @for (option of statusOptions; track option.value) {
+                  <mat-option [value]="option.value">{{ option.label }}</mat-option>
+                }
+              </mat-select>
+            </mat-form-field>
+
+            <button mat-button (click)="toggleComments(task.id)" class="comments-toggle">
+              <mat-icon>comment</mat-icon>
+              {{ task.commentCount }} comment{{ task.commentCount === 1 ? '' : 's' }}
+              — {{ expandedTaskId() === task.id ? 'Hide' : 'Show' }}
+            </button>
+
+            @if (expandedTaskId() === task.id) {
+              <div class="comments-panel">
+                @for (comment of commentsByTask()[task.id] || []; track comment.id) {
+                  <div class="comment-item">
+                    <strong>{{ comment.userName }}</strong>
+                    <span class="comment-date">{{ comment.createdAt | date: 'short' }}</span>
+                    <p>{{ comment.content }}</p>
+                  </div>
+                } @empty {
+                  <p class="meta">No comments yet — start the discussion below.</p>
+                }
+
+                <div class="comment-input-row">
+                  <mat-form-field appearance="outline" class="comment-input">
+                    <input
+                      matInput
+                      placeholder="Write a comment..."
+                      [(ngModel)]="newCommentText[task.id]"
+                      (keyup.enter)="addComment(task.id)"
+                    />
+                  </mat-form-field>
+                  <button mat-icon-button color="primary" (click)="addComment(task.id)">
+                    <mat-icon>send</mat-icon>
+                  </button>
+                </div>
+              </div>
+            }
+          </mat-card-content>
+        </mat-card>
+      }
+    </div>
+  }
+</div>

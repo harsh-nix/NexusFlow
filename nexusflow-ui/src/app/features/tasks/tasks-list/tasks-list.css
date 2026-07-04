@@ -1,0 +1,37 @@
+.page-container { padding: 24px; }
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+.back-link {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #666;
+  text-decoration: none;
+  font-size: 14px;
+}
+.back-link:hover {
+  color: #1976d2;
+  text-decoration: underline;
+}
+.tasks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+.task-card { padding: 8px; }
+.meta { color: #666; font-size: 13px; }
+.error-text { color: #d32f2f; }
+.status-select { width: 140px; margin-top: 8px; display: block; }
+.comments-toggle { margin-top: 8px; }
+.comments-panel {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #e0e0e0;
+}
+.comment-item { margin-bottom: 8px; font-size: 14px; }
+.comment-date { color: #999; font-size: 12px; margin-left: 8px; }
+.comment-input-row { display: flex; align-items: center; gap: 4px; }
+.comment-input { flex: 1; }

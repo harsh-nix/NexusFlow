@@ -1,0 +1,5 @@
+.page-container { padding: 24px; display: flex; justify-content: center; }
+.form-card { width: 100%; max-width: 500px; }
+.full-width { width: 100%; margin-bottom: 8px; }
+.button-row { display: flex; justify-content: flex-end; gap: 8px; margin-top: 16px; }
+.error-text { color: #d32f2f; font-size: 14px; }
