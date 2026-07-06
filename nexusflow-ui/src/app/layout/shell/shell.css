@@ -1,0 +1,28 @@
+.brand {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  margin-right: 8px;
+}
+.nav-link { color: white; }
+.spacer { flex: 1 1 auto; }
+.user-name { margin: 0 16px; font-size: 14px; }
+.notif-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  font-weight: 600;
+  border-bottom: 1px solid #e0e0e0;
+}
+.notif-empty { padding: 16px; color: #666; text-align: center; }
+.notif-item {
+  display: flex;
+  flex-direction: column;
+  white-space: normal;
+  line-height: 1.4;
+  padding: 4px 0;
+}
+.notif-item small { color: #999; }
+.unread { background-color: #e3f2fd; }

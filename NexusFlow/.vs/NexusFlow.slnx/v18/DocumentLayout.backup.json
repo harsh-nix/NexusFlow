@@ -366,12 +366,11 @@
               "Title": "UsersController.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.API\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.API\\Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.API\\Controllers\\UsersController.cs*",
-              "RelativeToolTip": "src\\NexusFlow.API\\Controllers\\UsersController.cs*",
+              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.API\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "src\\NexusFlow.API\\Controllers\\UsersController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-04T16:48:29.282Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-04T16:48:29.282Z"
             },
             {
               "$type": "Document",
@@ -379,12 +378,11 @@
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Services\\UserService.cs*",
-              "RelativeToolTip": "src\\NexusFlow.Application\\Services\\UserService.cs*",
+              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Services\\UserService.cs",
+              "RelativeToolTip": "src\\NexusFlow.Application\\Services\\UserService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-04T16:42:55.902Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-04T16:42:55.902Z"
             },
             {
               "$type": "Document",
@@ -396,8 +394,7 @@
               "RelativeToolTip": "src\\NexusFlow.Application\\Services\\Interfaces\\IUserService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-04T16:42:33.395Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-04T16:42:33.395Z"
             },
             {
               "$type": "Document",
@@ -445,8 +442,7 @@
               "RelativeToolTip": "src\\NexusFlow.API\\Program.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAAACoAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-28T09:54:01.203Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-28T09:54:01.203Z"
             },
             {
               "$type": "Document",

@@ -13,3 +13,9 @@
 .project-card { padding: 8px; }
 .meta { color: #666; font-size: 13px; }
 .error-text { color: #d32f2f; }
+.card-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 8px;
+}

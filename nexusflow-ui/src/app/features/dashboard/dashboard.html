@@ -1,15 +1,3 @@
-<mat-toolbar color="primary">
-  <span>NexusFlow</span>
-  <a mat-button routerLink="/projects" class="nav-link">Projects</a>
-  <span class="spacer"></span>
-  @if (authService.currentUser(); as user) {
-    <span class="user-name">{{ user.fullName }} ({{ user.role }})</span>
-  }
-  <button mat-icon-button (click)="onLogout()" aria-label="Logout">
-    <mat-icon>logout</mat-icon>
-  </button>
-</mat-toolbar>
-
 <div class="dashboard-container">
   @if (isLoading()) {
     <p>Loading dashboard...</p>

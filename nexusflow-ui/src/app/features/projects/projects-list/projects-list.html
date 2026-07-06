@@ -21,8 +21,17 @@
             </mat-card-subtitle>
           </mat-card-header>
           <mat-card-content>
-           <p class="meta">{{ project.memberCount }} members · {{ project.taskCount }} tasks</p>
-<a mat-button color="primary" [routerLink]="['/projects', project.id, 'tasks']">View Tasks</a>
+            <p>{{ project.description || 'No description provided.' }}</p>
+            <p class="meta">{{ project.memberCount }} members · {{ project.taskCount }} tasks</p>
+            <div class="card-actions">
+              <a mat-button color="primary" [routerLink]="['/projects', project.id, 'tasks']">View Tasks</a>
+              <a mat-icon-button [routerLink]="['/projects', project.id, 'edit']" aria-label="Edit project">
+                <mat-icon>edit</mat-icon>
+              </a>
+              <button mat-icon-button color="warn" (click)="onDelete(project)" aria-label="Delete project">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </div>
           </mat-card-content>
         </mat-card>
       }

@@ -1,0 +1,44 @@
+<mat-toolbar color="primary">
+  <a routerLink="/dashboard" class="brand">NexusFlow</a>
+  <a mat-button routerLink="/dashboard" class="nav-link">Dashboard</a>
+  <a mat-button routerLink="/projects" class="nav-link">Projects</a>
+  <span class="spacer"></span>
+
+  <button mat-icon-button [matMenuTriggerFor]="notifMenu" aria-label="Notifications">
+    <mat-icon [matBadge]="unreadCount() > 0 ? unreadCount() : null" matBadgeColor="warn" matBadgeSize="small">
+      notifications
+    </mat-icon>
+  </button>
+
+  <mat-menu #notifMenu="matMenu" class="notif-menu">
+    <div class="notif-header" (click)="$event.stopPropagation()">
+      <span>Notifications</span>
+      @if (unreadCount() > 0) {
+        <button mat-button (click)="onMarkAllAsRead()">Mark all as read</button>
+      }
+    </div>
+
+    @if (notifications().length === 0) {
+      <p class="notif-empty">No notifications yet.</p>
+    } @else {
+      @for (notification of notifications(); track notification.id) {
+        <button mat-menu-item [class.unread]="!notification.isRead" (click)="onNotificationClick(notification)">
+          <div class="notif-item">
+            <strong>{{ notification.title }}</strong>
+            <span>{{ notification.message }}</span>
+            <small>{{ notification.createdAt | date: 'short' }}</small>
+          </div>
+        </button>
+      }
+    }
+  </mat-menu>
+
+  @if (authService.currentUser(); as user) {
+    <span class="user-name">{{ user.fullName }} ({{ user.role }})</span>
+  }
+  <button mat-icon-button (click)="onLogout()" aria-label="Logout">
+    <mat-icon>logout</mat-icon>
+  </button>
+</mat-toolbar>
+
+<router-outlet></router-outlet>
