@@ -29,14 +29,15 @@
         </mat-form-field>
 
         <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Assign To</mat-label>
+          <mat-select formControlName="assigneeIds" multiple>
+            @for (user of users(); track user.id) {
+              <mat-option [value]="user.id">{{ user.fullName }} ({{ user.role }})</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+
         <mat-form-field appearance="outline" class="full-width">
-  <mat-label>Assign To</mat-label>
-  <mat-select formControlName="assigneeIds" multiple>
-    @for (user of users(); track user.id) {
-      <mat-option [value]="user.id">{{ user.fullName }} ({{ user.role }})</mat-option>
-    }
-  </mat-select>
-</mat-form-field>
           <mat-label>Due Date</mat-label>
           <input matInput [matDatepicker]="dueDatePicker" formControlName="dueDate" />
           <mat-datepicker-toggle matIconSuffix [for]="dueDatePicker"></mat-datepicker-toggle>

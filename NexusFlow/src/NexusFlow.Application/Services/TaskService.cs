@@ -1,4 +1,5 @@
-﻿using NexusFlow.Application.DTOs.Common;
+﻿using AutoMapper;
+using NexusFlow.Application.DTOs.Common;
 using NexusFlow.Application.DTOs.Tasks;
 using NexusFlow.Application.Services.Interfaces;
 using NexusFlow.Domain.Entities;
@@ -12,28 +13,24 @@ namespace NexusFlow.Application.Services
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly INotificationService _notificationService;
+        private readonly IMapper _mapper;
 
         public TaskService(
             IUnitOfWork unitOfWork,
-            INotificationService notificationService)
+            INotificationService notificationService,
+            IMapper mapper)
         {
             _unitOfWork = unitOfWork;
             _notificationService = notificationService;
+            _mapper = mapper;
         }
 
         public async Task<ApiResponse<TaskDto>> CreateAsync(
             CreateTaskDto dto, int userId)
         {
-            var task = new ProjectTask
-            {
-                Title = dto.Title,
-                Description = dto.Description,
-                Priority = dto.Priority,
-                DueDate = dto.DueDate,
-                ProjectId = dto.ProjectId,
-                Status = TaskStatus.Todo,
-                CreatedBy = userId
-            };
+            var task = _mapper.Map<ProjectTask>(dto);
+            task.Status = TaskStatus.Todo;
+            task.CreatedBy = userId;
 
             await _unitOfWork.Repository<ProjectTask>().AddAsync(task);
             await _unitOfWork.SaveChangesAsync();
@@ -58,7 +55,8 @@ namespace NexusFlow.Application.Services
                 await _unitOfWork.SaveChangesAsync();
 
             return ApiResponse<TaskDto>.Created(
-                MapToDto(task), "Task created successfully.");
+                await EnrichAsync(_mapper.Map<TaskDto>(task), task),
+                "Task created successfully.");
         }
 
         public async Task<ApiResponse<TaskDto>> GetByIdAsync(int id)
@@ -71,7 +69,9 @@ namespace NexusFlow.Application.Services
             if (task == null)
                 return ApiResponse<TaskDto>.Fail("Task not found.", 404);
 
-            return ApiResponse<TaskDto>.Ok(MapToDto(task));
+            var dto = await EnrichAsync(_mapper.Map<TaskDto>(task), task);
+
+            return ApiResponse<TaskDto>.Ok(dto);
         }
 
         public async Task<ApiResponse<List<TaskDto>>> GetByProjectAsync(int projectId)
@@ -79,7 +79,21 @@ namespace NexusFlow.Application.Services
             var tasks = await _unitOfWork.Repository<ProjectTask>()
                 .FindAsync(t => t.ProjectId == projectId && !t.IsDeleted);
 
-            var result = tasks.Select(MapToDto).ToList();
+            var taskList = tasks.ToList();
+            var result = new List<TaskDto>();
+
+            // Project name is the same for every task in this list, so look
+            // it up once instead of once per task.
+            var projects = await _unitOfWork.Repository<Project>()
+                .FindAsync(p => p.Id == projectId);
+            var projectName = projects.FirstOrDefault()?.Name ?? string.Empty;
+
+            foreach (var task in taskList)
+            {
+                var dto = _mapper.Map<TaskDto>(task);
+                dto.ProjectName = projectName;
+                result.Add(await EnrichAsync(dto, task, skipProjectLookup: true));
+            }
 
             return ApiResponse<List<TaskDto>>.Ok(result);
         }
@@ -95,18 +109,15 @@ namespace NexusFlow.Application.Services
             if (task == null)
                 return ApiResponse<TaskDto>.Fail("Task not found.", 404);
 
-            task.Title = dto.Title;
-            task.Description = dto.Description;
-            task.Status = dto.Status;
-            task.Priority = dto.Priority;
-            task.DueDate = dto.DueDate;
+            _mapper.Map(dto, task);
             task.UpdatedBy = userId;
 
             _unitOfWork.Repository<ProjectTask>().Update(task);
             await _unitOfWork.SaveChangesAsync();
 
-            return ApiResponse<TaskDto>.Ok(
-                MapToDto(task), "Task updated successfully.");
+            var resultDto = await EnrichAsync(_mapper.Map<TaskDto>(task), task);
+
+            return ApiResponse<TaskDto>.Ok(resultDto, "Task updated successfully.");
         }
 
         public async Task<ApiResponse<bool>> DeleteAsync(int id, int userId)
@@ -128,17 +139,43 @@ namespace NexusFlow.Application.Services
             return ApiResponse<bool>.Ok(true, "Task deleted successfully.");
         }
 
-        private static TaskDto MapToDto(ProjectTask task) => new()
+        /// <summary>
+        /// Fills in the four TaskDto fields AutoMapper deliberately leaves
+        /// blank (ProjectName, AssigneeNames, SubTaskCount, CommentCount)
+        /// because they need extra queries beyond the ProjectTask row itself.
+        /// This was a known, flagged gap since the AutoMapper wiring — it's
+        /// what was causing comment counts to reset to 0 on reload.
+        /// </summary>
+        private async Task<TaskDto> EnrichAsync(
+            TaskDto dto, ProjectTask task, bool skipProjectLookup = false)
         {
-            Id = task.Id,
-            Title = task.Title,
-            Description = task.Description,
-            Status = task.Status.ToString(),
-            Priority = task.Priority.ToString(),
-            DueDate = task.DueDate,
-            ProjectId = task.ProjectId,
-            CreatedBy = task.CreatedBy,
-            CreatedAt = task.CreatedAt
-        };
+            if (!skipProjectLookup)
+            {
+                var projects = await _unitOfWork.Repository<Project>()
+                    .FindAsync(p => p.Id == task.ProjectId);
+                dto.ProjectName = projects.FirstOrDefault()?.Name ?? string.Empty;
+            }
+
+            var assignees = await _unitOfWork.Repository<TaskAssignee>()
+                .FindAsync(a => a.TaskId == task.Id && !a.IsDeleted);
+            var assigneeUserIds = assignees.Select(a => a.UserId).ToList();
+
+            if (assigneeUserIds.Any())
+            {
+                var users = await _unitOfWork.Repository<User>()
+                    .FindAsync(u => assigneeUserIds.Contains(u.Id));
+                dto.AssigneeNames = users.Select(u => u.FullName).ToList();
+            }
+
+            var subTasks = await _unitOfWork.Repository<SubTask>()
+                .FindAsync(s => s.ParentTaskId == task.Id && !s.IsDeleted);
+            dto.SubTaskCount = subTasks.Count();
+
+            var comments = await _unitOfWork.Repository<Comment>()
+                .FindAsync(c => c.TaskId == task.Id && !c.IsDeleted);
+            dto.CommentCount = comments.Count();
+
+            return dto;
+        }
     }
 }

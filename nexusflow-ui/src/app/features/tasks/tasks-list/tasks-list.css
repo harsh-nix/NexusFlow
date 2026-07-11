@@ -24,8 +24,7 @@
 .task-card { padding: 8px; }
 .meta { color: #666; font-size: 13px; }
 .error-text { color: #d32f2f; }
-.status-select { width: 140px; margin-top: 8px; display: block; }
-.comments-toggle { margin-top: 8px; }
+.status-select { width: 140px; margin-top: 8px; display: block; } 
 .comments-panel {
   margin-top: 8px;
   padding-top: 8px;
@@ -35,3 +34,10 @@
 .comment-date { color: #999; font-size: 12px; margin-left: 8px; }
 .comment-input-row { display: flex; align-items: center; gap: 4px; }
 .comment-input { flex: 1; }
+.task-actions-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 8px;
+}
+.comments-toggle { flex: 1; justify-content: flex-start; }

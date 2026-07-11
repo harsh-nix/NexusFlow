@@ -11,6 +11,10 @@ export class TaskService {
 
   constructor(private http: HttpClient) {}
 
+  getById(id: number): Observable<ApiResponse<ProjectTask>> {
+    return this.http.get<ApiResponse<ProjectTask>>(`${this.baseUrl}/${id}`);
+  }
+
   getByProject(projectId: number): Observable<ApiResponse<ProjectTask[]>> {
     return this.http.get<ApiResponse<ProjectTask[]>>(`${this.baseUrl}/project/${projectId}`);
   }
@@ -21,5 +25,9 @@ export class TaskService {
 
   update(id: number, request: UpdateTaskRequest): Observable<ApiResponse<ProjectTask>> {
     return this.http.put<ApiResponse<ProjectTask>>(`${this.baseUrl}/${id}`, request);
+  }
+
+  delete(id: number): Observable<ApiResponse<boolean>> {
+    return this.http.delete<ApiResponse<boolean>>(`${this.baseUrl}/${id}`);
   }
 }

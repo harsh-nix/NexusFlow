@@ -1,3 +1,7 @@
+mat-toolbar {
+  background-color: #1976d2 !important;
+  color: white !important;
+}
 .brand {
   color: white;
   text-decoration: none;

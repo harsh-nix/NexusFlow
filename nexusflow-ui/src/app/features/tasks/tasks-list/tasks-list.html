@@ -41,11 +41,19 @@
               </mat-select>
             </mat-form-field>
 
-            <button mat-button (click)="toggleComments(task.id)" class="comments-toggle">
-              <mat-icon>comment</mat-icon>
-              {{ task.commentCount }} comment{{ task.commentCount === 1 ? '' : 's' }}
-              — {{ expandedTaskId() === task.id ? 'Hide' : 'Show' }}
-            </button>
+            <div class="task-actions-row">
+  <button mat-button (click)="toggleComments(task.id)" class="comments-toggle">
+    <mat-icon>comment</mat-icon>
+    {{ task.commentCount }} comment{{ task.commentCount === 1 ? '' : 's' }}
+    — {{ expandedTaskId() === task.id ? 'Hide' : 'Show' }}
+  </button>
+  <a mat-icon-button [routerLink]="['/projects', projectId, 'tasks', task.id, 'edit']" aria-label="Edit task">
+    <mat-icon>edit</mat-icon>
+  </a>
+  <button mat-icon-button color="warn" (click)="onDelete(task)" aria-label="Delete task">
+    <mat-icon>delete</mat-icon>
+  </button>
+</div>
 
             @if (expandedTaskId() === task.id) {
               <div class="comments-panel">

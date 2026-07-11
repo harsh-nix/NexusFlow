@@ -87,6 +87,18 @@ export class TasksListComponent implements OnInit {
       },
     });
   }
+  onDelete(task: ProjectTask): void {
+  const confirmed = confirm(`Delete "${task.title}"? This cannot be undone.`);
+  if (!confirmed) return;
+
+  this.taskService.delete(task.id).subscribe({
+    next: (res) => {
+      if (res.success) {
+        this.tasks.update((list) => list.filter((t) => t.id !== task.id));
+      }
+    },
+  });
+}
 
   onStatusChange(task: ProjectTask, newStatus: TaskStatusEnum): void {
     this.taskService
@@ -111,6 +123,7 @@ export class TasksListComponent implements OnInit {
       this.expandedTaskId.set(null); // clicking the same task again closes it
       return;
     }
+    
 
     this.expandedTaskId.set(taskId);
 
