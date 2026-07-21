@@ -1,0 +1,35 @@
+.confirm-dialog {
+  padding: 8px 4px 0 4px;
+  max-width: 360px;
+}
+
+.confirm-dialog-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--nf-primary-light);
+  color: var(--nf-primary);
+  margin-bottom: var(--nf-space-3);
+}
+
+.confirm-dialog-icon--destructive {
+  background: var(--nf-priority-high-bg);
+  color: var(--nf-priority-high);
+}
+
+h2[mat-dialog-title] {
+  margin: 0 0 var(--nf-space-2) 0;
+}
+
+mat-dialog-content {
+  color: var(--nf-ink-muted);
+  font-size: 0.9375rem;
+}
+
+mat-dialog-actions {
+  margin-top: var(--nf-space-4);
+  padding: 0 !important;
+}

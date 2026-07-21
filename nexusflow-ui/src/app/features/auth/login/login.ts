@@ -7,7 +7,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatIconModule } from '@angular/material/icon';
 import { AuthService } from '../../../core/services/auth.service';
+import { SnackbarService } from '../../../core/services/snackbar.service';
 
 // "standalone: true" means this component does NOT need to be declared
 // inside an NgModule — it lists everything it needs (forms, Material
@@ -24,6 +26,7 @@ import { AuthService } from '../../../core/services/auth.service';
     MatButtonModule,
     MatCardModule,
     MatProgressSpinnerModule,
+    MatIconModule,
   ],
   templateUrl: './login.html',
   styleUrl: './login.css',
@@ -44,7 +47,8 @@ export class LoginComponent {
   constructor(
     private fb: FormBuilder,
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private snackbar: SnackbarService
   ) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
@@ -67,14 +71,19 @@ export class LoginComponent {
       next: (res) => {
         this.isLoading.set(false);
         if (res.success) {
+          this.snackbar.success('Welcome back!');
           this.router.navigate(['/dashboard']);
         } else {
-          this.errorMessage.set(res.message || 'Login failed.');
+          const message = res.message || 'Login failed.';
+          this.errorMessage.set(message);
+          this.snackbar.error(message);
         }
       },
       error: (err) => {
         this.isLoading.set(false);
-        this.errorMessage.set(err.error?.message || 'Something went wrong. Please try again.');
+        const message = err.error?.message || 'Something went wrong. Please try again.';
+        this.errorMessage.set(message);
+        this.snackbar.error(message);
       },
     });
   }

@@ -409,12 +409,3 @@ If we follow this approach, you'll end up with a project that's suitable not onl
 ***this is about the project which I will make on my own (solo)
 so now combine all the details and make prompt for another ai so it can understand what I am building and what is my purpose of making this project***
 
-
-
-https://chatgpt.com/share/6a3fdef3-7e04-83ee-9294-27d284511233 this chat has the all details of my scenario 
-https://chatgpt.com/share/6a3fded8-5528-83e8-bbf5-e7bae5998fe6 this chat has the all details which I get while I was doing the setup for above chat
-I am attaching the important files and pics which is important to read for you 
-so now read all the files and images which I send it to you
-and read all chats carefully
-and understand all the things and scenario from chats and files & images
-and then create the structure again of whole project

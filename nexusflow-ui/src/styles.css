@@ -1,1 +1,234 @@
-/* You can add global styles to this file, and also import other style files */
+/* ============================================================
+   NexusFlow global styles
+   Loaded once, applies everywhere. Component-specific styles
+   still live in each component's own .css file.
+   ============================================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--nf-primary);
+}
+
+/* ---------- Typography scale --------------------------------- */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--nf-font-display);
+  color: var(--nf-ink);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 var(--nf-space-2) 0;
+}
+
+h1 {
+  font-size: 1.75rem;
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: 1.375rem;
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: 1.125rem;
+  line-height: 1.35;
+}
+
+p {
+  color: var(--nf-ink-muted);
+  line-height: 1.6;
+}
+
+/* Monospace treatment available for stat numbers / data anywhere in the app */
+.nf-numeric {
+  font-family: var(--nf-font-mono);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* ---------- Scrollbar polish ----------------------------------- */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #cbd3dd;
+  border-radius: 999px;
+  border: 2px solid var(--nf-bg);
+}
+
+/* ============================================================
+   Global Angular Material overrides
+   These apply to every mat-card / mat-button / mat-form-field
+   in the app immediately, without editing each page.
+   ============================================================ */
+
+.mat-mdc-card {
+  border-radius: var(--nf-radius-md) !important;
+  box-shadow: var(--nf-shadow-sm) !important;
+  border: 1px solid var(--nf-border);
+  background-color: var(--nf-surface) !important;
+}
+
+.mat-mdc-card-title {
+  font-family: var(--nf-font-display) !important;
+  font-weight: 700 !important;
+  color: var(--nf-ink) !important;
+}
+
+.mat-mdc-card-subtitle {
+  color: var(--nf-ink-muted) !important;
+}
+
+/* Cards that should visibly react to hover (opt-in per page in later phases) */
+.nf-card-interactive {
+  transition: box-shadow 0.18s ease, transform 0.18s ease;
+  cursor: pointer;
+}
+
+.nf-card-interactive:hover {
+  box-shadow: var(--nf-shadow-hover) !important;
+  transform: translateY(-2px);
+}
+
+.mat-mdc-raised-button,
+.mat-mdc-unelevated-button {
+  border-radius: var(--nf-radius-sm) !important;
+  font-weight: 600 !important;
+}
+
+/* ============================================================
+   Status & Priority chips
+   Reusable classes ready for Projects/Tasks pages (Phase 3/4).
+   Usage: <span class="status-chip status-chip--done">Done</span>
+   ============================================================ */
+
+.status-chip,
+.priority-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.status-chip--todo {
+  color: var(--nf-status-todo);
+  background: var(--nf-status-todo-bg);
+}
+.status-chip--in-progress {
+  color: var(--nf-status-inprogress);
+  background: var(--nf-status-inprogress-bg);
+}
+.status-chip--in-review {
+  color: var(--nf-status-inreview);
+  background: var(--nf-status-inreview-bg);
+}
+.status-chip--done {
+  color: var(--nf-status-done);
+  background: var(--nf-status-done-bg);
+}
+.status-chip--cancelled {
+  color: var(--nf-status-cancelled);
+  background: var(--nf-status-cancelled-bg);
+}
+
+.priority-chip--low {
+  color: var(--nf-priority-low);
+  background: var(--nf-priority-low-bg);
+}
+.priority-chip--medium {
+  color: var(--nf-priority-medium);
+  background: var(--nf-priority-medium-bg);
+}
+.priority-chip--high {
+  color: var(--nf-priority-high);
+  background: var(--nf-priority-high-bg);
+}
+.priority-chip--critical {
+  color: var(--nf-priority-critical);
+  background: var(--nf-priority-critical-bg);
+}
+
+/* ---------- Empty states (ready for Phase 3/4 pages) --------------- */
+
+.nf-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--nf-space-7) var(--nf-space-4);
+  color: var(--nf-ink-muted);
+}
+
+.nf-empty-state mat-icon {
+  font-size: 48px;
+  width: 48px;
+  height: 48px;
+  color: var(--nf-ink-faint);
+  margin-bottom: var(--nf-space-3);
+}
+
+.nf-empty-state h3 {
+  color: var(--nf-ink);
+  margin-bottom: var(--nf-space-1);
+}
+
+/* ============================================================
+   Snackbar (toast) notifications
+   Colored via the SnackbarService's panelClass. Overrides the
+   MatSnackBar container so all three variants share one look.
+   ============================================================ */
+
+.nf-snackbar .mdc-snackbar__surface {
+  border-radius: var(--nf-radius-sm) !important;
+}
+
+.nf-snackbar--success .mdc-snackbar__surface {
+  background-color: #16a34a !important;
+}
+
+.nf-snackbar--error .mdc-snackbar__surface {
+  background-color: #dc2626 !important;
+}
+
+.nf-snackbar--info .mdc-snackbar__surface {
+  background-color: var(--nf-primary) !important;
+}
+
+.nf-snackbar .mdc-snackbar__label,
+.nf-snackbar .mat-mdc-snack-bar-label {
+  color: white !important;
+  font-weight: 500;
+}
+
+.nf-snackbar .mat-mdc-button {
+  color: white !important;
+}

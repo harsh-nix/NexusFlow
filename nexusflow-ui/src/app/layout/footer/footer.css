@@ -1,0 +1,15 @@
+.nf-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 24px;
+  font-size: 0.8125rem;
+  color: var(--nf-ink-faint);
+  border-top: 1px solid var(--nf-border);
+  background-color: var(--nf-surface);
+}
+
+.nf-footer-dot {
+  color: var(--nf-border);
+}

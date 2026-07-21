@@ -1,38 +1,65 @@
 <div class="page-container">
   <div class="page-header">
-    <h2>My Projects</h2>
-    <a mat-raised-button color="primary" routerLink="/projects/new">+ New Project</a>
+    <div>
+      <h1>My Projects</h1>
+      <p>Everything you're a member of, in one place.</p>
+    </div>
+    <a mat-raised-button color="primary" routerLink="/projects/new">
+      <mat-icon>add</mat-icon>
+      New Project
+    </a>
   </div>
 
   @if (isLoading()) {
-    <p>Loading projects...</p>
+    <div class="page-loading">
+      <mat-spinner diameter="40"></mat-spinner>
+      <p>Loading your projects...</p>
+    </div>
   } @else if (errorMessage()) {
-    <p class="error-text">{{ errorMessage() }}</p>
+    <div class="nf-empty-state">
+      <mat-icon>error_outline</mat-icon>
+      <h3>Something went wrong</h3>
+      <p>{{ errorMessage() }}</p>
+    </div>
   } @else if (projects().length === 0) {
-    <p>You don't have any projects yet. Create your first one above.</p>
+    <div class="nf-empty-state">
+      <mat-icon>folder_open</mat-icon>
+      <h3>No Projects Yet</h3>
+      <p>Create your first project to start organizing tasks.</p>
+      <a mat-raised-button color="primary" routerLink="/projects/new">+ New Project</a>
+    </div>
   } @else {
     <div class="projects-grid">
       @for (project of projects(); track project.id) {
         <mat-card class="project-card">
-          <mat-card-header>
-            <mat-card-title>{{ project.name }}</mat-card-title>
-            <mat-card-subtitle>
-              <mat-chip>{{ project.status }}</mat-chip>
-            </mat-card-subtitle>
-          </mat-card-header>
-          <mat-card-content>
-            <p>{{ project.description || 'No description provided.' }}</p>
-            <p class="meta">{{ project.memberCount }} members · {{ project.taskCount }} tasks</p>
-            <div class="card-actions">
-              <a mat-button color="primary" [routerLink]="['/projects', project.id, 'tasks']">View Tasks</a>
-              <a mat-icon-button [routerLink]="['/projects', project.id, 'edit']" aria-label="Edit project">
-                <mat-icon>edit</mat-icon>
-              </a>
-              <button mat-icon-button color="warn" (click)="onDelete(project)" aria-label="Delete project">
-                <mat-icon>delete</mat-icon>
-              </button>
-            </div>
-          </mat-card-content>
+          <div class="project-card-top">
+            <span class="status-chip" [class]="statusChipClass(project.status)">{{ project.status }}</span>
+          </div>
+
+          <h3 class="project-name">{{ project.name }}</h3>
+          <p class="project-desc">{{ project.description || 'No description provided.' }}</p>
+
+          <div class="project-meta">
+            <span class="meta-pill">
+              <mat-icon>group</mat-icon>
+              {{ project.memberCount }} {{ project.memberCount === 1 ? 'member' : 'members' }}
+            </span>
+            <span class="meta-pill">
+              <mat-icon>task_alt</mat-icon>
+              {{ project.taskCount }} {{ project.taskCount === 1 ? 'task' : 'tasks' }}
+            </span>
+          </div>
+
+          <div class="card-actions">
+            <a mat-button color="primary" [routerLink]="['/projects', project.id, 'tasks']">View Tasks</a>
+            <span class="spacer"></span>
+            <a mat-icon-button [routerLink]="['/projects', project.id, 'edit']" aria-label="Edit project">
+              <mat-icon>edit</mat-icon>
+            </a>
+            <button mat-icon-button color="warn" (click)="onDelete(project)" aria-label="Delete project">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
         </mat-card>
       }
     </div>

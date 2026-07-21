@@ -68,6 +68,32 @@ export function statusStringToEnum(value: string): TaskStatusEnum {
   return STATUS_STRING_TO_ENUM[value] ?? TaskStatusEnum.Todo;
 }
 
+// Maps backend status/priority strings to the reusable chip classes
+// defined globally in styles.css, so task cards, project cards, and
+// anywhere else chips appear all share one color language.
+const STATUS_TO_CHIP_CLASS: Record<string, string> = {
+  Todo: 'status-chip--todo',
+  InProgress: 'status-chip--in-progress',
+  InReview: 'status-chip--in-review',
+  Done: 'status-chip--done',
+  Cancelled: 'status-chip--cancelled',
+};
+
+const PRIORITY_TO_CHIP_CLASS: Record<string, string> = {
+  Low: 'priority-chip--low',
+  Medium: 'priority-chip--medium',
+  High: 'priority-chip--high',
+  Critical: 'priority-chip--critical',
+};
+
+export function taskStatusChipClass(status: string): string {
+  return STATUS_TO_CHIP_CLASS[status] ?? 'status-chip--todo';
+}
+
+export function taskPriorityChipClass(priority: string): string {
+  return PRIORITY_TO_CHIP_CLASS[priority] ?? 'priority-chip--medium';
+}
+
 export interface CreateTaskRequest {
   title: string;
   description?: string;

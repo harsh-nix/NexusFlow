@@ -1,44 +1,104 @@
-<mat-toolbar color="primary">
-  <a routerLink="/dashboard" class="brand">NexusFlow</a>
-  <a mat-button routerLink="/dashboard" class="nav-link">Dashboard</a>
-  <a mat-button routerLink="/projects" class="nav-link">Projects</a>
-  <span class="spacer"></span>
+<div class="nf-shell">
+  <mat-toolbar class="nf-toolbar">
+    <a routerLink="/dashboard" class="nf-brand">
+      <span class="nf-brand-mark" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <path d="M4 12h6l2-6 4 12 2-6h2" stroke="white" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span class="nf-brand-word">NexusFlow</span>
+    </a>
 
-  <button mat-icon-button [matMenuTriggerFor]="notifMenu" aria-label="Notifications">
-    <mat-icon [matBadge]="unreadCount() > 0 ? unreadCount() : null" matBadgeColor="warn" matBadgeSize="small">
-      notifications
-    </mat-icon>
-  </button>
+    <nav class="nf-nav">
+      <a mat-button routerLink="/dashboard" routerLinkActive="nf-nav-link--active" class="nf-nav-link">
+        <mat-icon>space_dashboard</mat-icon>
+        <span>Dashboard</span>
+      </a>
+      <a mat-button routerLink="/projects" routerLinkActive="nf-nav-link--active" class="nf-nav-link">
+        <mat-icon>folder_open</mat-icon>
+        <span>Projects</span>
+      </a>
+    </nav>
 
-  <mat-menu #notifMenu="matMenu" class="notif-menu">
-    <div class="notif-header" (click)="$event.stopPropagation()">
-      <span>Notifications</span>
-      @if (unreadCount() > 0) {
-        <button mat-button (click)="onMarkAllAsRead()">Mark all as read</button>
+    <span class="nf-spacer"></span>
+
+    <button
+      mat-icon-button
+      [matMenuTriggerFor]="notifMenu"
+      aria-label="Notifications"
+      class="nf-icon-btn"
+    >
+      <mat-icon [matBadge]="unreadCount() > 0 ? unreadCount() : null" matBadgeColor="warn" matBadgeSize="small">
+        notifications
+      </mat-icon>
+    </button>
+
+    <mat-menu #notifMenu="matMenu" class="nf-notif-menu">
+      <div class="nf-notif-header" (click)="$event.stopPropagation()">
+        <span>Notifications</span>
+        @if (unreadCount() > 0) {
+          <button mat-button color="primary" (click)="onMarkAllAsRead()">Mark all as read</button>
+        }
+      </div>
+
+      @if (notifications().length === 0) {
+        <div class="nf-notif-empty">
+          <mat-icon>notifications_none</mat-icon>
+          <p>You're all caught up.</p>
+        </div>
+      } @else {
+        <div class="nf-notif-list">
+          @for (notification of notifications(); track notification.id) {
+            <button
+              mat-menu-item
+              class="nf-notif-item"
+              [class.nf-notif-item--unread]="!notification.isRead"
+              (click)="onNotificationClick(notification)"
+            >
+              <span class="nf-notif-rail"></span>
+              <span class="nf-notif-body">
+                <strong>{{ notification.title }}</strong>
+                <span class="nf-notif-message">{{ notification.message }}</span>
+                <small class="nf-notif-time">{{ notification.createdAt | date: 'short' }}</small>
+              </span>
+            </button>
+          }
+        </div>
       }
-    </div>
+    </mat-menu>
 
-    @if (notifications().length === 0) {
-      <p class="notif-empty">No notifications yet.</p>
-    } @else {
-      @for (notification of notifications(); track notification.id) {
-        <button mat-menu-item [class.unread]="!notification.isRead" (click)="onNotificationClick(notification)">
-          <div class="notif-item">
-            <strong>{{ notification.title }}</strong>
-            <span>{{ notification.message }}</span>
-            <small>{{ notification.createdAt | date: 'short' }}</small>
+    <button mat-button [matMenuTriggerFor]="userMenu" class="nf-user-trigger">
+      <span class="nf-avatar">{{ userInitials() }}</span>
+      @if (authService.currentUser(); as user) {
+        <span class="nf-user-text">
+          <span class="nf-user-name">{{ user.fullName }}</span>
+          <span class="nf-user-role">{{ user.role }}</span>
+        </span>
+      }
+      <mat-icon class="nf-caret">expand_more</mat-icon>
+    </button>
+
+    <mat-menu #userMenu="matMenu">
+      @if (authService.currentUser(); as user) {
+        <div class="nf-user-menu-header" (click)="$event.stopPropagation()">
+          <span class="nf-avatar nf-avatar--lg">{{ userInitials() }}</span>
+          <div>
+            <div class="nf-user-name">{{ user.fullName }}</div>
+            <div class="nf-user-role">{{ user.role }}</div>
           </div>
-        </button>
+        </div>
+        <mat-divider></mat-divider>
       }
-    }
-  </mat-menu>
+      <button mat-menu-item (click)="onLogout()">
+        <mat-icon>logout</mat-icon>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+  </mat-toolbar>
 
-  @if (authService.currentUser(); as user) {
-    <span class="user-name">{{ user.fullName }} ({{ user.role }})</span>
-  }
-  <button mat-icon-button (click)="onLogout()" aria-label="Logout">
-    <mat-icon>logout</mat-icon>
-  </button>
-</mat-toolbar>
+  <main class="nf-content">
+    <router-outlet></router-outlet>
+  </main>
 
-<router-outlet></router-outlet>
+  <app-footer></app-footer>
+</div>

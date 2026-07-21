@@ -50,6 +50,21 @@ export function projectStatusStringToEnum(value: string): ProjectStatusEnum {
   return STATUS_STRING_TO_ENUM[value] ?? ProjectStatusEnum.Planning;
 }
 
+// Maps the backend's status string (e.g. "OnHold") to one of the 5
+// reusable ".status-chip--*" classes defined globally in styles.css,
+// so every status pill in the app shares the same color language.
+const STATUS_TO_CHIP_CLASS: Record<string, string> = {
+  Planning: 'status-chip--todo',
+  Active: 'status-chip--in-progress',
+  OnHold: 'status-chip--in-review',
+  Completed: 'status-chip--done',
+  Cancelled: 'status-chip--cancelled',
+};
+
+export function projectStatusChipClass(status: string): string {
+  return STATUS_TO_CHIP_CLASS[status] ?? 'status-chip--todo';
+}
+
 export interface UpdateProjectRequest {
   name: string;
   description?: string;

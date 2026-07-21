@@ -1,0 +1,20 @@
+<div class="confirm-dialog">
+  <div class="confirm-dialog-icon" [class.confirm-dialog-icon--destructive]="data.destructive">
+    <mat-icon>{{ data.destructive ? 'warning' : 'help_outline' }}</mat-icon>
+  </div>
+
+  <h2 mat-dialog-title>{{ data.title }}</h2>
+  <mat-dialog-content>{{ data.message }}</mat-dialog-content>
+
+  <mat-dialog-actions align="end">
+    <button mat-button (click)="onCancel()">{{ data.cancelText || 'Cancel' }}</button>
+    <button
+      mat-raised-button
+      [color]="data.destructive ? 'warn' : 'primary'"
+      (click)="onConfirm()"
+      cdkFocusInitial
+    >
+      {{ data.confirmText || 'Confirm' }}
+    </button>
+  </mat-dialog-actions>
+</div>

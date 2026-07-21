@@ -14,7 +14,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatIconModule } from '@angular/material/icon';
 import { AuthService } from '../../../core/services/auth.service';
+import { SnackbarService } from '../../../core/services/snackbar.service';
 
 // A "custom validator" — a plain function that checks something Angular's
 // built-in validators can't (here: do the two password fields match?).
@@ -37,6 +39,7 @@ function passwordsMatchValidator(control: AbstractControl): ValidationErrors | n
     MatButtonModule,
     MatCardModule,
     MatProgressSpinnerModule,
+    MatIconModule,
   ],
   templateUrl: './register.html',
   styleUrl: './register.css',
@@ -49,7 +52,8 @@ export class RegisterComponent {
   constructor(
     private fb: FormBuilder,
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private snackbar: SnackbarService
   ) {
     this.registerForm = this.fb.group(
       {
@@ -76,9 +80,12 @@ export class RegisterComponent {
       next: (res) => {
         this.isLoading.set(false);
         if (res.success) {
+          this.snackbar.success('Account created! Welcome to NexusFlow.');
           this.router.navigate(['/dashboard']);
         } else {
-          this.errorMessage.set(res.message || 'Registration failed.');
+          const message = res.message || 'Registration failed.';
+          this.errorMessage.set(message);
+          this.snackbar.error(message);
         }
       },
       error: (err) => {
@@ -86,7 +93,9 @@ export class RegisterComponent {
         // The backend's ValidationFilter (from Batch 1) returns errors as
         // an array under res.errors when FluentValidation rejects the input.
         const apiErrors = err.error?.errors as string[] | undefined;
-        this.errorMessage.set(apiErrors?.join(' ') || err.error?.message || 'Something went wrong.');
+        const message = apiErrors?.join(' ') || err.error?.message || 'Something went wrong.';
+        this.errorMessage.set(message);
+        this.snackbar.error(message);
       },
     });
   }
