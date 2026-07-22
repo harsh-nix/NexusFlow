@@ -44,7 +44,7 @@
               "RelativeDocumentMoniker": "src\\NexusFlow.API\\Controllers\\CommentsController.cs",
               "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.API\\Controllers\\CommentsController.cs",
               "RelativeToolTip": "src\\NexusFlow.API\\Controllers\\CommentsController.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAiwD4AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAA2wD4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-22T13:53:31.365Z",
               "EditorCaption": ""
@@ -59,8 +59,7 @@
               "RelativeToolTip": "src\\NexusFlow.API\\Controllers\\TasksController.cs",
               "ViewState": "AgIAAEYAAAAAAAAAAAAUwFQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-22T13:48:31.861Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-22T13:48:31.861Z"
             },
             {
               "$type": "Document",
@@ -72,8 +71,7 @@
               "RelativeToolTip": "src\\NexusFlow.API\\Extensions\\ServiceExtensions.cs",
               "ViewState": "AgIAADUAAAAAAAAAAAAYwGcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-22T12:35:08.421Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-22T12:35:08.421Z"
             },
             {
               "$type": "Document",

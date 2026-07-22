@@ -1,0 +1,180 @@
+<div class="page-container">
+  <div class="page-header">
+    <div>
+      <a [routerLink]="['/projects', projectId, 'tasks']" class="back-link">
+        <mat-icon>arrow_back</mat-icon>
+        Back to Tasks
+      </a>
+      <h1>{{ task()?.title || 'Task Details' }}</h1>
+    </div>
+    @if (task()) {
+      <a mat-stroked-button [routerLink]="['/projects', projectId, 'tasks', taskId, 'edit']">
+        <mat-icon>edit</mat-icon>
+        Edit Task
+      </a>
+    }
+  </div>
+
+  @if (isLoadingTask()) {
+    <div class="page-loading">
+      <mat-spinner diameter="40"></mat-spinner>
+      <p>Loading task...</p>
+    </div>
+  } @else if (!task()) {
+    <div class="nf-empty-state">
+      <mat-icon>error_outline</mat-icon>
+      <h3>Task not found</h3>
+      <p>{{ errorMessage() }}</p>
+    </div>
+  } @else {
+    @if (errorMessage()) {
+      <p class="error-text">{{ errorMessage() }}</p>
+    }
+    @if (actionMessage()) {
+      <p class="success-text">{{ actionMessage() }}</p>
+    }
+
+    <mat-card class="detail-card">
+      <div class="task-chips">
+        <span class="status-chip" [class]="taskStatusChipClass(task()!.status)">{{ task()!.status }}</span>
+        <span class="priority-chip" [class]="taskPriorityChipClass(task()!.priority)">{{ task()!.priority }}</span>
+      </div>
+
+      <p class="task-desc">{{ task()!.description || 'No description provided.' }}</p>
+
+      <div class="task-meta-row">
+        @if (task()!.dueDate) {
+          <span class="meta-pill">
+            <mat-icon>event</mat-icon>
+            {{ task()!.dueDate | date: 'mediumDate' }}
+          </span>
+        }
+        @if (task()!.assigneeNames.length > 0) {
+          <span class="meta-pill" [title]="task()!.assigneeNames.join(', ')">
+            <mat-icon>person</mat-icon>
+            {{ task()!.assigneeNames.join(', ') }}
+          </span>
+        }
+      </div>
+
+      @if (task()!.assignmentNote) {
+        <div class="assignment-note">
+          <mat-icon>info</mat-icon>
+          <p>{{ task()!.assignmentNote }}</p>
+        </div>
+      }
+
+      @if (canAccept()) {
+        <button mat-raised-button color="primary" [disabled]="isAccepting()" (click)="acceptTask()">
+          @if (isAccepting()) { Accepting... } @else { Accept Task }
+        </button>
+      }
+    </mat-card>
+
+    <mat-card class="detail-card">
+      <h3>Update Status</h3>
+      <form [formGroup]="statusForm" (ngSubmit)="submitStatusUpdate()" class="status-form">
+        <mat-form-field appearance="outline" class="status-field">
+          <mat-label>Status</mat-label>
+          <mat-select formControlName="status">
+            @for (option of statusOptions; track option.value) {
+              <mat-option [value]="option.value">{{ option.label }}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="note-field">
+          <mat-label>Work log note (optional)</mat-label>
+          <input matInput formControlName="note" placeholder="e.g. Finished backend, starting tests." />
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit" [disabled]="isUpdatingStatus()">
+          @if (isUpdatingStatus()) { Updating... } @else { Update Status }
+        </button>
+      </form>
+    </mat-card>
+
+    <mat-card class="detail-card">
+      <h3>Discussion</h3>
+
+      @if (isLoadingComments()) {
+        <p class="meta-empty">Loading comments...</p>
+      } @else {
+        @for (comment of comments(); track comment.id) {
+          <div class="comment-item" [class.comment-item--clarification]="comment.type !== 'Comment'">
+            <strong>{{ comment.userName }}</strong>
+            <span class="comment-type-tag" [ngSwitch]="comment.type">
+              <ng-container *ngSwitchCase="'Clarification'"> asked a question</ng-container>
+              <ng-container *ngSwitchCase="'ClarificationResponse'"> responded</ng-container>
+              <ng-container *ngSwitchCase="'WorkLog'"> logged work</ng-container>
+            </span>
+            <span class="comment-date">{{ comment.createdAt | date: 'short' }}</span>
+            <p>{{ comment.content }}</p>
+          </div>
+        } @empty {
+          <p class="meta-empty">No comments yet — start the discussion below.</p>
+        }
+      }
+
+      <form [formGroup]="commentForm" (ngSubmit)="submitComment()" class="comment-input-row">
+        <mat-form-field appearance="outline" class="comment-input">
+          <input matInput formControlName="content" placeholder="Write a comment..." />
+        </mat-form-field>
+        <button mat-icon-button color="primary" type="submit" [disabled]="isPostingComment()">
+          <mat-icon>send</mat-icon>
+        </button>
+      </form>
+    </mat-card>
+
+    <mat-card class="detail-card">
+      <h3>Request Clarification</h3>
+      <p class="meta-empty">Assigned to this task and something's unclear? Ask here.</p>
+      <form [formGroup]="clarificationForm" (ngSubmit)="submitClarification()" class="comment-input-row">
+        <mat-form-field appearance="outline" class="comment-input">
+          <input matInput formControlName="message" placeholder="What do you need clarified?" />
+        </mat-form-field>
+        <button mat-raised-button color="accent" type="submit" [disabled]="isRequestingClarification()">
+          @if (isRequestingClarification()) { Sending... } @else { Ask }
+        </button>
+      </form>
+    </mat-card>
+
+    @if (canRespondToClarification()) {
+      <mat-card class="detail-card">
+        <h3>Respond to Clarification</h3>
+        <form [formGroup]="responseForm" (ngSubmit)="submitClarificationResponse()" class="comment-input-row">
+          <mat-form-field appearance="outline" class="comment-input">
+            <input matInput formControlName="message" placeholder="Write your response..." />
+          </mat-form-field>
+          <button mat-raised-button color="primary" type="submit" [disabled]="isRespondingClarification()">
+            @if (isRespondingClarification()) { Sending... } @else { Respond }
+          </button>
+        </form>
+      </mat-card>
+    }
+
+    <mat-card class="detail-card">
+      <h3>Activity Timeline</h3>
+      @if (isLoadingActivity()) {
+        <p class="meta-empty">Loading activity...</p>
+      } @else {
+        @for (entry of activity(); track $index) {
+          <div class="activity-item">
+            <mat-icon>history</mat-icon>
+            <div>
+              <p>
+                <strong>{{ entry.userName }}</strong> — {{ entry.action }}
+                @if (entry.oldValue && entry.newValue) {
+                  <span class="activity-change">({{ entry.oldValue }} → {{ entry.newValue }})</span>
+                }
+              </p>
+              <span class="comment-date">{{ entry.createdAt | date: 'short' }}</span>
+            </div>
+          </div>
+        } @empty {
+          <p class="meta-empty">No activity recorded yet.</p>
+        }
+      }
+    </mat-card>
+  }
+</div>
