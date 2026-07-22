@@ -15,5 +15,9 @@ namespace NexusFlow.Application.DTOs.Tasks
         public DateTime? DueDate { get; set; }
         public int ProjectId { get; set; }
         public List<int> AssigneeIds { get; set; } = new();
+
+        // Optional. Shown to the assignee above the discussion thread so
+        // they see *why* they got this task before reading any comments.
+        public string? AssignmentNote { get; set; }
     }
 }

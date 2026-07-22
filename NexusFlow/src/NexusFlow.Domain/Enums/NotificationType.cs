@@ -11,6 +11,8 @@ namespace NexusFlow.Domain.Enums
         ProjectCreated = 3,
         CommentAdded = 4,
         DeadlineApproaching = 5,
-        MentionedInComment = 6
+        MentionedInComment = 6,
+        ClarificationRequested = 7,
+        ClarificationResponded = 8
     }
 }

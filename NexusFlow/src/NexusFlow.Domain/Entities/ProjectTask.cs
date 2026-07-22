@@ -12,6 +12,11 @@ namespace NexusFlow.Domain.Entities
         public DateTime? DueDate { get; set; }
         public int ProjectId { get; set; }
 
+        // Written by the manager at assignment time. Shown on the Task
+        // Details page above the discussion thread, so the assignee sees
+        // *why* the task was assigned before reading any comments.
+        public string? AssignmentNote { get; set; }
+
         // Navigation
         public Project? Project { get; set; }
         public ICollection<SubTask> SubTasks { get; set; } = new List<SubTask>();

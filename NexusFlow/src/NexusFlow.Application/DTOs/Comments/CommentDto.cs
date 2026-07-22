@@ -12,5 +12,8 @@ namespace NexusFlow.Application.DTOs.Comments
         public int UserId { get; set; }
         public string UserName { get; set; } = string.Empty;
         public DateTime CreatedAt { get; set; }
+
+        // "Comment" | "Clarification" | "ClarificationResponse" | "WorkLog"
+        public string Type { get; set; } = "Comment";
     }
 }

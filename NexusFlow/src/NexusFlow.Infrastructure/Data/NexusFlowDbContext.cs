@@ -4,6 +4,7 @@ using System.Text;
 
 using Microsoft.EntityFrameworkCore;
 using NexusFlow.Domain.Entities;
+using NexusFlow.Domain.Enums;
 using TaskStatus = NexusFlow.Domain.Enums.TaskStatus;
 
 namespace NexusFlow.Infrastructure.Data
@@ -137,6 +138,7 @@ namespace NexusFlow.Infrastructure.Data
                 entity.Property(e => e.Title).IsRequired().HasMaxLength(200);
                 entity.Property(e => e.Status).HasConversion<int>();
                 entity.Property(e => e.Priority).HasConversion<int>();
+                entity.Property(e => e.AssignmentNote).HasMaxLength(2000);
                 entity.HasOne(e => e.Project)
                       .WithMany(p => p.Tasks)
                       .HasForeignKey(e => e.ProjectId)
@@ -174,6 +176,9 @@ namespace NexusFlow.Infrastructure.Data
             {
                 entity.HasKey(e => e.Id);
                 entity.Property(e => e.Content).IsRequired().HasMaxLength(1000);
+                entity.Property(e => e.Type)
+                      .HasConversion<int>()
+                      .HasDefaultValue(CommentType.Comment);
                 entity.HasOne(e => e.Task)
                       .WithMany(t => t.Comments)
                       .HasForeignKey(e => e.TaskId)
@@ -196,6 +201,10 @@ namespace NexusFlow.Infrastructure.Data
                       .WithMany(u => u.Notifications)
                       .HasForeignKey(e => e.UserId)
                       .OnDelete(DeleteBehavior.Cascade);
+                entity.HasOne(e => e.RelatedTask)
+                      .WithMany()
+                      .HasForeignKey(e => e.RelatedTaskId)
+                      .OnDelete(DeleteBehavior.NoAction);
             });
 
             // AuditLog

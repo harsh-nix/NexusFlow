@@ -10,5 +10,16 @@ namespace NexusFlow.Application.Services.Interfaces
         Task<ApiResponse<List<TaskDto>>> GetByProjectAsync(int projectId);
         Task<ApiResponse<TaskDto>> UpdateAsync(int id, UpdateTaskDto dto, int userId);
         Task<ApiResponse<bool>> DeleteAsync(int id, int userId);
+
+        // Assignee acknowledges the task and it moves Todo -> InProgress.
+        // Only an actual assignee may call this.
+        Task<ApiResponse<TaskDto>> AcceptTaskAsync(int id, int userId);
+
+        // Dedicated status-change path (separate from the full edit form)
+        // so every change is ownership-checked, audit-logged, and can carry
+        // an optional work-log note.
+        Task<ApiResponse<TaskDto>> UpdateStatusAsync(int id, UpdateTaskStatusDto dto, int userId);
+
+        Task<ApiResponse<List<TaskActivityDto>>> GetActivityAsync(int id);
     }
 }

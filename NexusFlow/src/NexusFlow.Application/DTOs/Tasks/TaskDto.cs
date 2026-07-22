@@ -19,5 +19,6 @@ namespace NexusFlow.Application.DTOs.Tasks
         public List<string> AssigneeNames { get; set; } = new();
         public int SubTaskCount { get; set; }
         public int CommentCount { get; set; }
+        public string? AssignmentNote { get; set; }
     }
 }

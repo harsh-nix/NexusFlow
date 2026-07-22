@@ -3,6 +3,42 @@
   "WorkspaceRootPath": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Infrastructure\\Migrations\\20260722072318_AddWorkflowCollaborationFields.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\NexusFlow.Infrastructure\\Migrations\\20260722072318_AddWorkflowCollaborationFields.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1435C2D-14AC-E070-4C62-C33BBC69D4DE}|src\\NexusFlow.Infrastructure\\NexusFlow.Infrastructure.csproj|c:\\users\\harsh\\documents\\full_stack\\03_projects\\nexusflow\\nexusflow\\src\\nexusflow.infrastructure\\data\\nexusflowdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1435C2D-14AC-E070-4C62-C33BBC69D4DE}|src\\NexusFlow.Infrastructure\\NexusFlow.Infrastructure.csproj|solutionrelative:src\\nexusflow.infrastructure\\data\\nexusflowdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1232D99F-8AD7-2063-5A88-70F1599D046A}|src\\NexusFlow.Domain\\NexusFlow.Domain.csproj|c:\\users\\harsh\\documents\\full_stack\\03_projects\\nexusflow\\nexusflow\\src\\nexusflow.domain\\enums\\notificationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1232D99F-8AD7-2063-5A88-70F1599D046A}|src\\NexusFlow.Domain\\NexusFlow.Domain.csproj|solutionrelative:src\\nexusflow.domain\\enums\\notificationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1232D99F-8AD7-2063-5A88-70F1599D046A}|src\\NexusFlow.Domain\\NexusFlow.Domain.csproj|c:\\users\\harsh\\documents\\full_stack\\03_projects\\nexusflow\\nexusflow\\src\\nexusflow.domain\\entities\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1232D99F-8AD7-2063-5A88-70F1599D046A}|src\\NexusFlow.Domain\\NexusFlow.Domain.csproj|solutionrelative:src\\nexusflow.domain\\entities\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1232D99F-8AD7-2063-5A88-70F1599D046A}|src\\NexusFlow.Domain\\NexusFlow.Domain.csproj|c:\\users\\harsh\\documents\\full_stack\\03_projects\\nexusflow\\nexusflow\\src\\nexusflow.domain\\entities\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1232D99F-8AD7-2063-5A88-70F1599D046A}|src\\NexusFlow.Domain\\NexusFlow.Domain.csproj|solutionrelative:src\\nexusflow.domain\\entities\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1232D99F-8AD7-2063-5A88-70F1599D046A}|src\\NexusFlow.Domain\\NexusFlow.Domain.csproj|c:\\users\\harsh\\documents\\full_stack\\03_projects\\nexusflow\\nexusflow\\src\\nexusflow.domain\\entities\\projecttask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1232D99F-8AD7-2063-5A88-70F1599D046A}|src\\NexusFlow.Domain\\NexusFlow.Domain.csproj|solutionrelative:src\\nexusflow.domain\\entities\\projecttask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1232D99F-8AD7-2063-5A88-70F1599D046A}|src\\NexusFlow.Domain\\NexusFlow.Domain.csproj|c:\\users\\harsh\\documents\\full_stack\\03_projects\\nexusflow\\nexusflow\\src\\nexusflow.domain\\entities\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1232D99F-8AD7-2063-5A88-70F1599D046A}|src\\NexusFlow.Domain\\NexusFlow.Domain.csproj|solutionrelative:src\\nexusflow.domain\\entities\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1232D99F-8AD7-2063-5A88-70F1599D046A}|src\\NexusFlow.Domain\\NexusFlow.Domain.csproj|c:\\users\\harsh\\documents\\full_stack\\03_projects\\nexusflow\\nexusflow\\src\\nexusflow.domain\\enums\\commenttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1232D99F-8AD7-2063-5A88-70F1599D046A}|src\\NexusFlow.Domain\\NexusFlow.Domain.csproj|solutionrelative:src\\nexusflow.domain\\enums\\commenttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{549916D2-EBF7-32A2-5CBF-920253A0670C}|src\\NexusFlow.API\\NexusFlow.API.csproj|c:\\users\\harsh\\documents\\full_stack\\03_projects\\nexusflow\\nexusflow\\src\\nexusflow.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{549916D2-EBF7-32A2-5CBF-920253A0670C}|src\\NexusFlow.API\\NexusFlow.API.csproj|solutionrelative:src\\nexusflow.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CC3CEBF1-53E1-39FE-3F33-A3B083608876}|src\\NexusFlow.Application\\NexusFlow.Application.csproj|c:\\users\\harsh\\documents\\full_stack\\03_projects\\nexusflow\\nexusflow\\src\\nexusflow.application\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC3CEBF1-53E1-39FE-3F33-A3B083608876}|src\\NexusFlow.Application\\NexusFlow.Application.csproj|solutionrelative:src\\nexusflow.application\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -85,10 +121,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{CC3CEBF1-53E1-39FE-3F33-A3B083608876}|src\\NexusFlow.Application\\NexusFlow.Application.csproj|c:\\users\\harsh\\documents\\full_stack\\03_projects\\nexusflow\\nexusflow\\src\\nexusflow.application\\mappings\\projectprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC3CEBF1-53E1-39FE-3F33-A3B083608876}|src\\NexusFlow.Application\\NexusFlow.Application.csproj|solutionrelative:src\\nexusflow.application\\mappings\\projectprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1435C2D-14AC-E070-4C62-C33BBC69D4DE}|src\\NexusFlow.Infrastructure\\NexusFlow.Infrastructure.csproj|c:\\users\\harsh\\documents\\full_stack\\03_projects\\nexusflow\\nexusflow\\src\\nexusflow.infrastructure\\data\\nexusflowdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1435C2D-14AC-E070-4C62-C33BBC69D4DE}|src\\NexusFlow.Infrastructure\\NexusFlow.Infrastructure.csproj|solutionrelative:src\\nexusflow.infrastructure\\data\\nexusflowdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{549916D2-EBF7-32A2-5CBF-920253A0670C}|src\\NexusFlow.API\\NexusFlow.API.csproj|c:\\users\\harsh\\documents\\full_stack\\03_projects\\nexusflow\\nexusflow\\src\\nexusflow.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -211,10 +243,6 @@
       "RelativeMoniker": "D:0:0:{A1435C2D-14AC-E070-4C62-C33BBC69D4DE}|src\\NexusFlow.Infrastructure\\NexusFlow.Infrastructure.csproj|solutionrelative:src\\nexusflow.infrastructure\\services\\jwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{549916D2-EBF7-32A2-5CBF-920253A0670C}|src\\NexusFlow.API\\NexusFlow.API.csproj|c:\\users\\harsh\\documents\\full_stack\\03_projects\\nexusflow\\nexusflow\\src\\nexusflow.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{549916D2-EBF7-32A2-5CBF-920253A0670C}|src\\NexusFlow.API\\NexusFlow.API.csproj|solutionrelative:src\\nexusflow.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CC3CEBF1-53E1-39FE-3F33-A3B083608876}|src\\NexusFlow.Application\\NexusFlow.Application.csproj|c:\\users\\harsh\\documents\\full_stack\\03_projects\\nexusflow\\nexusflow\\src\\nexusflow.application\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC3CEBF1-53E1-39FE-3F33-A3B083608876}|src\\NexusFlow.Application\\NexusFlow.Application.csproj|solutionrelative:src\\nexusflow.application\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -259,24 +287,12 @@
       "RelativeMoniker": "D:0:0:{1232D99F-8AD7-2063-5A88-70F1599D046A}|src\\NexusFlow.Domain\\NexusFlow.Domain.csproj|solutionrelative:src\\nexusflow.domain\\entities\\auditlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1232D99F-8AD7-2063-5A88-70F1599D046A}|src\\NexusFlow.Domain\\NexusFlow.Domain.csproj|c:\\users\\harsh\\documents\\full_stack\\03_projects\\nexusflow\\nexusflow\\src\\nexusflow.domain\\entities\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1232D99F-8AD7-2063-5A88-70F1599D046A}|src\\NexusFlow.Domain\\NexusFlow.Domain.csproj|solutionrelative:src\\nexusflow.domain\\entities\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1232D99F-8AD7-2063-5A88-70F1599D046A}|src\\NexusFlow.Domain\\NexusFlow.Domain.csproj|c:\\users\\harsh\\documents\\full_stack\\03_projects\\nexusflow\\nexusflow\\src\\nexusflow.domain\\entities\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1232D99F-8AD7-2063-5A88-70F1599D046A}|src\\NexusFlow.Domain\\NexusFlow.Domain.csproj|solutionrelative:src\\nexusflow.domain\\entities\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1232D99F-8AD7-2063-5A88-70F1599D046A}|src\\NexusFlow.Domain\\NexusFlow.Domain.csproj|c:\\users\\harsh\\documents\\full_stack\\03_projects\\nexusflow\\nexusflow\\src\\nexusflow.domain\\entities\\taskassignee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1232D99F-8AD7-2063-5A88-70F1599D046A}|src\\NexusFlow.Domain\\NexusFlow.Domain.csproj|solutionrelative:src\\nexusflow.domain\\entities\\taskassignee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1232D99F-8AD7-2063-5A88-70F1599D046A}|src\\NexusFlow.Domain\\NexusFlow.Domain.csproj|c:\\users\\harsh\\documents\\full_stack\\03_projects\\nexusflow\\nexusflow\\src\\nexusflow.domain\\entities\\subtask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1232D99F-8AD7-2063-5A88-70F1599D046A}|src\\NexusFlow.Domain\\NexusFlow.Domain.csproj|solutionrelative:src\\nexusflow.domain\\entities\\subtask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1232D99F-8AD7-2063-5A88-70F1599D046A}|src\\NexusFlow.Domain\\NexusFlow.Domain.csproj|c:\\users\\harsh\\documents\\full_stack\\03_projects\\nexusflow\\nexusflow\\src\\nexusflow.domain\\entities\\projecttask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1232D99F-8AD7-2063-5A88-70F1599D046A}|src\\NexusFlow.Domain\\NexusFlow.Domain.csproj|solutionrelative:src\\nexusflow.domain\\entities\\projecttask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1232D99F-8AD7-2063-5A88-70F1599D046A}|src\\NexusFlow.Domain\\NexusFlow.Domain.csproj|c:\\users\\harsh\\documents\\full_stack\\03_projects\\nexusflow\\nexusflow\\src\\nexusflow.domain\\entities\\projectmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -295,10 +311,6 @@
       "RelativeMoniker": "D:0:0:{1232D99F-8AD7-2063-5A88-70F1599D046A}|src\\NexusFlow.Domain\\NexusFlow.Domain.csproj|solutionrelative:src\\nexusflow.domain\\entities\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1232D99F-8AD7-2063-5A88-70F1599D046A}|src\\NexusFlow.Domain\\NexusFlow.Domain.csproj|c:\\users\\harsh\\documents\\full_stack\\03_projects\\nexusflow\\nexusflow\\src\\nexusflow.domain\\entities\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1232D99F-8AD7-2063-5A88-70F1599D046A}|src\\NexusFlow.Domain\\NexusFlow.Domain.csproj|solutionrelative:src\\nexusflow.domain\\entities\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1232D99F-8AD7-2063-5A88-70F1599D046A}|src\\NexusFlow.Domain\\NexusFlow.Domain.csproj|c:\\users\\harsh\\documents\\full_stack\\03_projects\\nexusflow\\nexusflow\\src\\nexusflow.domain\\entities\\organization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1232D99F-8AD7-2063-5A88-70F1599D046A}|src\\NexusFlow.Domain\\NexusFlow.Domain.csproj|solutionrelative:src\\nexusflow.domain\\entities\\organization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -313,10 +325,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1232D99F-8AD7-2063-5A88-70F1599D046A}|src\\NexusFlow.Domain\\NexusFlow.Domain.csproj|c:\\users\\harsh\\documents\\full_stack\\03_projects\\nexusflow\\nexusflow\\src\\nexusflow.domain\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1232D99F-8AD7-2063-5A88-70F1599D046A}|src\\NexusFlow.Domain\\NexusFlow.Domain.csproj|solutionrelative:src\\nexusflow.domain\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1232D99F-8AD7-2063-5A88-70F1599D046A}|src\\NexusFlow.Domain\\NexusFlow.Domain.csproj|c:\\users\\harsh\\documents\\full_stack\\03_projects\\nexusflow\\nexusflow\\src\\nexusflow.domain\\enums\\notificationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1232D99F-8AD7-2063-5A88-70F1599D046A}|src\\NexusFlow.Domain\\NexusFlow.Domain.csproj|solutionrelative:src\\nexusflow.domain\\enums\\notificationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1232D99F-8AD7-2063-5A88-70F1599D046A}|src\\NexusFlow.Domain\\NexusFlow.Domain.csproj|c:\\users\\harsh\\documents\\full_stack\\03_projects\\nexusflow\\nexusflow\\src\\nexusflow.domain\\enums\\taskpriority.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -363,91 +371,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Services\\Interfaces\\IUserService.cs",
-              "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Services\\Interfaces\\IUserService.cs",
-              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Services\\Interfaces\\IUserService.cs",
-              "RelativeToolTip": "src\\NexusFlow.Application\\Services\\Interfaces\\IUserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Title": "20260722072318_AddWorkflowCollaborationFields.cs",
+              "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Infrastructure\\Migrations\\20260722072318_AddWorkflowCollaborationFields.cs",
+              "RelativeDocumentMoniker": "src\\NexusFlow.Infrastructure\\Migrations\\20260722072318_AddWorkflowCollaborationFields.cs",
+              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Infrastructure\\Migrations\\20260722072318_AddWorkflowCollaborationFields.cs",
+              "RelativeToolTip": "src\\NexusFlow.Infrastructure\\Migrations\\20260722072318_AddWorkflowCollaborationFields.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-04T16:42:33.395Z",
+              "WhenOpened": "2026-07-22T07:23:18.25Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UpdateTaskDtoValidator.cs",
-              "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Validators\\Tasks\\UpdateTaskDtoValidator.cs",
-              "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Validators\\Tasks\\UpdateTaskDtoValidator.cs",
-              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Validators\\Tasks\\UpdateTaskDtoValidator.cs",
-              "RelativeToolTip": "src\\NexusFlow.Application\\Validators\\Tasks\\UpdateTaskDtoValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "CommentType.cs",
+              "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\Enums\\CommentType.cs",
+              "RelativeDocumentMoniker": "src\\NexusFlow.Domain\\Enums\\CommentType.cs",
+              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\Enums\\CommentType.cs",
+              "RelativeToolTip": "src\\NexusFlow.Domain\\Enums\\CommentType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-02T12:53:44.585Z"
+              "WhenOpened": "2026-07-22T07:13:56.276Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "CreateTaskDtoValidator.cs",
-              "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Validators\\Tasks\\CreateTaskDtoValidator.cs",
-              "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Validators\\Tasks\\CreateTaskDtoValidator.cs",
-              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Validators\\Tasks\\CreateTaskDtoValidator.cs",
-              "RelativeToolTip": "src\\NexusFlow.Application\\Validators\\Tasks\\CreateTaskDtoValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-02T12:53:17.234Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "UpdateProjectDtoValidator.cs",
-              "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Validators\\Projects\\UpdateProjectDtoValidator.cs",
-              "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Validators\\Projects\\UpdateProjectDtoValidator.cs",
-              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Validators\\Projects\\UpdateProjectDtoValidator.cs",
-              "RelativeToolTip": "src\\NexusFlow.Application\\Validators\\Projects\\UpdateProjectDtoValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-02T12:52:54.256Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.API\\Program.cs",
-              "RelativeDocumentMoniker": "src\\NexusFlow.API\\Program.cs",
-              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.API\\Program.cs",
-              "RelativeToolTip": "src\\NexusFlow.API\\Program.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAIBJwCoAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-28T09:54:01.203Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ServiceExtensions.cs",
-              "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.API\\Extensions\\ServiceExtensions.cs",
-              "RelativeDocumentMoniker": "src\\NexusFlow.API\\Extensions\\ServiceExtensions.cs",
-              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.API\\Extensions\\ServiceExtensions.cs",
-              "RelativeToolTip": "src\\NexusFlow.API\\Extensions\\ServiceExtensions.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAwwGMAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-28T09:53:12.569Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TaskService.cs",
-              "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Services\\TaskService.cs",
-              "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Services\\TaskService.cs",
-              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Services\\TaskService.cs",
-              "RelativeToolTip": "src\\NexusFlow.Application\\Services\\TaskService.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAcwLQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-29T06:15:13.697Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 13,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Services\\UserService.cs",
@@ -459,7 +408,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 12,
               "Title": "UsersController.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.API\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.API\\Controllers\\UsersController.cs",
@@ -471,7 +420,182 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Comment.cs",
+              "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\Entities\\Comment.cs",
+              "RelativeDocumentMoniker": "src\\NexusFlow.Domain\\Entities\\Comment.cs",
+              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\Entities\\Comment.cs",
+              "RelativeToolTip": "src\\NexusFlow.Domain\\Entities\\Comment.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAwwBsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T09:26:23.647Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProjectTask.cs",
+              "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\Entities\\ProjectTask.cs",
+              "RelativeDocumentMoniker": "src\\NexusFlow.Domain\\Entities\\ProjectTask.cs",
+              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\Entities\\ProjectTask.cs",
+              "RelativeToolTip": "src\\NexusFlow.Domain\\Entities\\ProjectTask.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAIwBkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T09:25:14.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Department.cs",
+              "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\Entities\\Department.cs",
+              "RelativeDocumentMoniker": "src\\NexusFlow.Domain\\Entities\\Department.cs",
+              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\Entities\\Department.cs",
+              "RelativeToolTip": "src\\NexusFlow.Domain\\Entities\\Department.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAgwBAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T09:23:24.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Notification.cs",
+              "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\Entities\\Notification.cs",
+              "RelativeDocumentMoniker": "src\\NexusFlow.Domain\\Entities\\Notification.cs",
+              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\Entities\\Notification.cs",
+              "RelativeToolTip": "src\\NexusFlow.Domain\\Entities\\Notification.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAowBoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T09:26:41.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NotificationType.cs",
+              "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\Enums\\NotificationType.cs",
+              "RelativeDocumentMoniker": "src\\NexusFlow.Domain\\Enums\\NotificationType.cs",
+              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\Enums\\NotificationType.cs",
+              "RelativeToolTip": "src\\NexusFlow.Domain\\Enums\\NotificationType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T09:20:11.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NexusFlowDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Infrastructure\\Data\\NexusFlowDbContext.cs",
+              "RelativeDocumentMoniker": "src\\NexusFlow.Infrastructure\\Data\\NexusFlowDbContext.cs",
+              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Infrastructure\\Data\\NexusFlowDbContext.cs",
+              "RelativeToolTip": "src\\NexusFlow.Infrastructure\\Data\\NexusFlowDbContext.cs",
+              "ViewState": "AgIAAOYAAAAAAAAAAAAkwOwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T09:42:55.674Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TaskService.cs",
+              "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Services\\TaskService.cs",
+              "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Services\\TaskService.cs",
+              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Services\\TaskService.cs",
+              "RelativeToolTip": "src\\NexusFlow.Application\\Services\\TaskService.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAcwLQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T06:15:13.697Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ServiceExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.API\\Extensions\\ServiceExtensions.cs",
+              "RelativeDocumentMoniker": "src\\NexusFlow.API\\Extensions\\ServiceExtensions.cs",
+              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.API\\Extensions\\ServiceExtensions.cs",
+              "RelativeToolTip": "src\\NexusFlow.API\\Extensions\\ServiceExtensions.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAwwGMAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T09:53:12.569Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.API\\Program.cs",
+              "RelativeDocumentMoniker": "src\\NexusFlow.API\\Program.cs",
+              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.API\\Program.cs",
+              "RelativeToolTip": "src\\NexusFlow.API\\Program.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAIBJwCoAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-28T09:54:01.203Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "UpdateProjectDtoValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Validators\\Projects\\UpdateProjectDtoValidator.cs",
+              "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Validators\\Projects\\UpdateProjectDtoValidator.cs",
+              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Validators\\Projects\\UpdateProjectDtoValidator.cs",
+              "RelativeToolTip": "src\\NexusFlow.Application\\Validators\\Projects\\UpdateProjectDtoValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-02T12:52:54.256Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CreateTaskDtoValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Validators\\Tasks\\CreateTaskDtoValidator.cs",
+              "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Validators\\Tasks\\CreateTaskDtoValidator.cs",
+              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Validators\\Tasks\\CreateTaskDtoValidator.cs",
+              "RelativeToolTip": "src\\NexusFlow.Application\\Validators\\Tasks\\CreateTaskDtoValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-02T12:53:17.234Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Services\\Interfaces\\IUserService.cs",
+              "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Services\\Interfaces\\IUserService.cs",
+              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Services\\Interfaces\\IUserService.cs",
+              "RelativeToolTip": "src\\NexusFlow.Application\\Services\\Interfaces\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T16:42:33.395Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.API\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "src\\NexusFlow.API\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.API\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "src\\NexusFlow.API\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T05:38:58.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UpdateTaskDtoValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Validators\\Tasks\\UpdateTaskDtoValidator.cs",
+              "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Validators\\Tasks\\UpdateTaskDtoValidator.cs",
+              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Validators\\Tasks\\UpdateTaskDtoValidator.cs",
+              "RelativeToolTip": "src\\NexusFlow.Application\\Validators\\Tasks\\UpdateTaskDtoValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-02T12:53:44.585Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "CreateCommentDtoValidator.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Validators\\Comments\\CreateCommentDtoValidator.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Validators\\Comments\\CreateCommentDtoValidator.cs",
@@ -483,7 +607,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 15,
               "Title": "NexusFlow.Application.csproj",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\NexusFlow.Application.csproj",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\NexusFlow.Application.csproj",
@@ -495,7 +619,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 16,
               "Title": "ValidationFilter.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.API\\Filters\\ValidationFilter.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.API\\Filters\\ValidationFilter.cs",
@@ -507,7 +631,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 21,
               "Title": "CreateProjectDtoValidator.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Validators\\Projects\\CreateProjectDtoValidator.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Validators\\Projects\\CreateProjectDtoValidator.cs",
@@ -519,7 +643,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 22,
               "Title": "LoginRequestDtoValidator.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Validators\\Auth\\LoginRequestDtoValidator.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Validators\\Auth\\LoginRequestDtoValidator.cs",
@@ -531,7 +655,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 23,
               "Title": "RegisterRequestDtoValidator.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Validators\\Auth\\RegisterRequestDtoValidator.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Validators\\Auth\\RegisterRequestDtoValidator.cs",
@@ -543,7 +667,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 24,
               "Title": "AuthProfile.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Mappings\\AuthProfile.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Mappings\\AuthProfile.cs",
@@ -555,7 +679,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 25,
               "Title": "UserProfile.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Mappings\\UserProfile.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Mappings\\UserProfile.cs",
@@ -567,7 +691,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 26,
               "Title": "NotificationProfile.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Mappings\\NotificationProfile.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Mappings\\NotificationProfile.cs",
@@ -579,7 +703,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 27,
               "Title": "CommentProfile.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Mappings\\CommentProfile.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Mappings\\CommentProfile.cs",
@@ -591,7 +715,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 28,
               "Title": "TaskProfile.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Mappings\\TaskProfile.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Mappings\\TaskProfile.cs",
@@ -603,7 +727,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 29,
               "Title": "ProjectProfile.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Mappings\\ProjectProfile.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Mappings\\ProjectProfile.cs",
@@ -615,7 +739,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 30,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.API\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "src\\NexusFlow.API\\Properties\\launchSettings.json",
@@ -627,7 +751,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 45,
               "Title": "ICommentService.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Services\\Interfaces\\ICommentService.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Services\\Interfaces\\ICommentService.cs",
@@ -639,7 +763,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 46,
               "Title": "CommentDto.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\DTOs\\Comments\\CommentDto.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\DTOs\\Comments\\CommentDto.cs",
@@ -651,7 +775,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 34,
               "Title": "IJwtTokenService.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Services\\Interfaces\\IJwtTokenService.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Services\\Interfaces\\IJwtTokenService.cs",
@@ -663,7 +787,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 33,
               "Title": "IProjectService.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Services\\Interfaces\\IProjectService.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Services\\Interfaces\\IProjectService.cs",
@@ -675,7 +799,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 32,
               "Title": "CommentsController.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.API\\Controllers\\CommentsController.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.API\\Controllers\\CommentsController.cs",
@@ -687,19 +811,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "NexusFlowDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Infrastructure\\Data\\NexusFlowDbContext.cs",
-              "RelativeDocumentMoniker": "src\\NexusFlow.Infrastructure\\Data\\NexusFlowDbContext.cs",
-              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Infrastructure\\Data\\NexusFlowDbContext.cs",
-              "RelativeToolTip": "src\\NexusFlow.Infrastructure\\Data\\NexusFlowDbContext.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwNMAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-28T09:42:55.674Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 43,
               "Title": "NotificationDto.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\DTOs\\Notifications\\NotificationDto.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\DTOs\\Notifications\\NotificationDto.cs",
@@ -711,7 +823,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 38,
               "Title": "DashboardStatsDto.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\DTOs\\Dashboard\\DashboardStatsDto.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\DTOs\\Dashboard\\DashboardStatsDto.cs",
@@ -723,7 +835,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 31,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.API\\appsettings.json",
               "RelativeDocumentMoniker": "src\\NexusFlow.API\\appsettings.json",
@@ -735,7 +847,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 37,
               "Title": "IDashboardService.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Services\\Interfaces\\IDashboardService.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Services\\Interfaces\\IDashboardService.cs",
@@ -747,7 +859,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 36,
               "Title": "DashboardService.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Services\\DashboardService.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Services\\DashboardService.cs",
@@ -759,7 +871,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 35,
               "Title": "DashboardController.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.API\\Controllers\\DashboardController.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.API\\Controllers\\DashboardController.cs",
@@ -771,7 +883,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 42,
               "Title": "INotificationService.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Services\\Interfaces\\INotificationService.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Services\\Interfaces\\INotificationService.cs",
@@ -783,7 +895,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 44,
               "Title": "CommentService.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Services\\CommentService.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Services\\CommentService.cs",
@@ -795,7 +907,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 39,
               "Title": "UnitOfWork.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Infrastructure\\UnitOfWork\\UnitOfWork.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Infrastructure\\UnitOfWork\\UnitOfWork.cs",
@@ -807,7 +919,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 41,
               "Title": "NotificationService.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Services\\NotificationService.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Services\\NotificationService.cs",
@@ -819,7 +931,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 40,
               "Title": "NotificationsController.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.API\\Controllers\\NotificationsController.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.API\\Controllers\\NotificationsController.cs",
@@ -831,7 +943,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 47,
               "Title": "CreateCommentDto.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\DTOs\\Comments\\CreateCommentDto.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\DTOs\\Comments\\CreateCommentDto.cs",
@@ -843,7 +955,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 50,
               "Title": "TasksController.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.API\\Controllers\\TasksController.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.API\\Controllers\\TasksController.cs",
@@ -855,7 +967,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 52,
               "Title": "ProjectService.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Services\\ProjectService.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Services\\ProjectService.cs",
@@ -867,7 +979,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 51,
               "Title": "ProjectsController.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.API\\Controllers\\ProjectsController.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.API\\Controllers\\ProjectsController.cs",
@@ -879,7 +991,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 49,
               "Title": "ITaskService.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Services\\Interfaces\\ITaskService.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Services\\Interfaces\\ITaskService.cs",
@@ -891,7 +1003,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 53,
               "Title": "TaskDto.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\DTOs\\Tasks\\TaskDto.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\DTOs\\Tasks\\TaskDto.cs",
@@ -903,7 +1015,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 54,
               "Title": "UpdateTaskDto.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\DTOs\\Tasks\\UpdateTaskDto.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\DTOs\\Tasks\\UpdateTaskDto.cs",
@@ -915,7 +1027,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 48,
               "Title": "ApiResponse.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\DTOs\\Common\\ApiResponse.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\DTOs\\Common\\ApiResponse.cs",
@@ -927,7 +1039,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 55,
               "Title": "CreateTaskDto.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\DTOs\\Tasks\\CreateTaskDto.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\DTOs\\Tasks\\CreateTaskDto.cs",
@@ -939,7 +1051,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 56,
               "Title": "ProjectDto.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\DTOs\\Projects\\ProjectDto.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\DTOs\\Projects\\ProjectDto.cs",
@@ -951,7 +1063,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 57,
               "Title": "UpdateProjectDto.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\DTOs\\Projects\\UpdateProjectDto.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\DTOs\\Projects\\UpdateProjectDto.cs",
@@ -963,7 +1075,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 58,
               "Title": "CreateProjectDto.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\DTOs\\Projects\\CreateProjectDto.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\DTOs\\Projects\\CreateProjectDto.cs",
@@ -975,19 +1087,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.API\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "src\\NexusFlow.API\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.API\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "src\\NexusFlow.API\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-29T05:38:58.981Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 60,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Services\\AuthService.cs",
@@ -999,7 +1099,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 59,
               "Title": "JwtTokenService.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Infrastructure\\Services\\JwtTokenService.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Infrastructure\\Services\\JwtTokenService.cs",
@@ -1011,7 +1111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 61,
               "Title": "IAuthService.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Services\\Interfaces\\IAuthService.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Services\\Interfaces\\IAuthService.cs",
@@ -1023,7 +1123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 62,
               "Title": "UserDto.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\DTOs\\Users\\UserDto.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\DTOs\\Users\\UserDto.cs",
@@ -1035,7 +1135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 63,
               "Title": "AuthResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\DTOs\\Auth\\AuthResponseDto.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\DTOs\\Auth\\AuthResponseDto.cs",
@@ -1047,7 +1147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 64,
               "Title": "LoginRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\DTOs\\Auth\\LoginRequestDto.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\DTOs\\Auth\\LoginRequestDto.cs",
@@ -1059,7 +1159,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 65,
               "Title": "RegisterRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\DTOs\\Auth\\RegisterRequestDto.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\DTOs\\Auth\\RegisterRequestDto.cs",
@@ -1071,7 +1171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
+              "DocumentIndex": 88,
               "Title": "20260629044757_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Infrastructure\\Migrations\\20260629044757_InitialCreate.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Infrastructure\\Migrations\\20260629044757_InitialCreate.cs",
@@ -1083,7 +1183,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 66,
               "Title": "ExceptionHandlingMiddleware.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.API\\Middleware\\ExceptionHandlingMiddleware.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.API\\Middleware\\ExceptionHandlingMiddleware.cs",
@@ -1095,7 +1195,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 67,
               "Title": "GenericRepository.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Infrastructure\\Repositories\\GenericRepository.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Infrastructure\\Repositories\\GenericRepository.cs",
@@ -1107,7 +1207,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 68,
               "Title": "IUnitOfWork.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\Interfaces\\IUnitOfWork.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Domain\\Interfaces\\IUnitOfWork.cs",
@@ -1119,7 +1219,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 69,
               "Title": "IGenericRepository.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\Interfaces\\Repositories\\IGenericRepository.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Domain\\Interfaces\\Repositories\\IGenericRepository.cs",
@@ -1131,7 +1231,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 70,
               "Title": "AuditLog.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\Entities\\AuditLog.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Domain\\Entities\\AuditLog.cs",
@@ -1143,31 +1243,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
-              "Title": "Notification.cs",
-              "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\Entities\\Notification.cs",
-              "RelativeDocumentMoniker": "src\\NexusFlow.Domain\\Entities\\Notification.cs",
-              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\Entities\\Notification.cs",
-              "RelativeToolTip": "src\\NexusFlow.Domain\\Entities\\Notification.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAgwBMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-28T09:26:41.954Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 65,
-              "Title": "Comment.cs",
-              "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\Entities\\Comment.cs",
-              "RelativeDocumentMoniker": "src\\NexusFlow.Domain\\Entities\\Comment.cs",
-              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\Entities\\Comment.cs",
-              "RelativeToolTip": "src\\NexusFlow.Domain\\Entities\\Comment.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAgwBAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-28T09:26:23.647Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 71,
               "Title": "TaskAssignee.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\Entities\\TaskAssignee.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Domain\\Entities\\TaskAssignee.cs",
@@ -1179,7 +1255,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 72,
               "Title": "SubTask.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\Entities\\SubTask.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Domain\\Entities\\SubTask.cs",
@@ -1191,19 +1267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
-              "Title": "ProjectTask.cs",
-              "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\Entities\\ProjectTask.cs",
-              "RelativeDocumentMoniker": "src\\NexusFlow.Domain\\Entities\\ProjectTask.cs",
-              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\Entities\\ProjectTask.cs",
-              "RelativeToolTip": "src\\NexusFlow.Domain\\Entities\\ProjectTask.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-28T09:25:14.244Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 73,
               "Title": "ProjectMember.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\Entities\\ProjectMember.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Domain\\Entities\\ProjectMember.cs",
@@ -1215,7 +1279,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 74,
               "Title": "Project.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\Entities\\Project.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Domain\\Entities\\Project.cs",
@@ -1227,7 +1291,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 75,
               "Title": "TeamMember.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\Entities\\TeamMember.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Domain\\Entities\\TeamMember.cs",
@@ -1239,7 +1303,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 76,
               "Title": "Team.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\Entities\\Team.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Domain\\Entities\\Team.cs",
@@ -1251,19 +1315,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
-              "Title": "Department.cs",
-              "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\Entities\\Department.cs",
-              "RelativeDocumentMoniker": "src\\NexusFlow.Domain\\Entities\\Department.cs",
-              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\Entities\\Department.cs",
-              "RelativeToolTip": "src\\NexusFlow.Domain\\Entities\\Department.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAgwBAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-28T09:23:24.541Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 77,
               "Title": "Organization.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\Entities\\Organization.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Domain\\Entities\\Organization.cs",
@@ -1275,7 +1327,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 78,
               "Title": "RefreshToken.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\Entities\\RefreshToken.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Domain\\Entities\\RefreshToken.cs",
@@ -1287,7 +1339,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 79,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\Entities\\User.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Domain\\Entities\\User.cs",
@@ -1299,7 +1351,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 80,
               "Title": "BaseEntity.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\Entities\\BaseEntity.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Domain\\Entities\\BaseEntity.cs",
@@ -1311,19 +1363,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
-              "Title": "NotificationType.cs",
-              "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\Enums\\NotificationType.cs",
-              "RelativeDocumentMoniker": "src\\NexusFlow.Domain\\Enums\\NotificationType.cs",
-              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\Enums\\NotificationType.cs",
-              "RelativeToolTip": "src\\NexusFlow.Domain\\Enums\\NotificationType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAIBJwBAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-28T09:20:11.442Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 81,
               "Title": "TaskPriority.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\Enums\\TaskPriority.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Domain\\Enums\\TaskPriority.cs",
@@ -1335,7 +1375,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 82,
               "Title": "TaskStatus.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\Enums\\TaskStatus.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Domain\\Enums\\TaskStatus.cs",
@@ -1347,7 +1387,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 83,
               "Title": "ProjectStatus.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\Enums\\ProjectStatus.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Domain\\Enums\\ProjectStatus.cs",
@@ -1359,7 +1399,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 84,
               "Title": "UserRole.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\Enums\\UserRole.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Domain\\Enums\\UserRole.cs",
@@ -1371,7 +1411,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 85,
               "Title": "NexusFlow.Domain.csproj",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Domain\\NexusFlow.Domain.csproj",
               "RelativeDocumentMoniker": "src\\NexusFlow.Domain\\NexusFlow.Domain.csproj",
@@ -1383,19 +1423,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 86,
               "Title": "NexusFlow.API.csproj",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.API\\NexusFlow.API.csproj",
               "RelativeDocumentMoniker": "src\\NexusFlow.API\\NexusFlow.API.csproj",
               "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.API\\NexusFlow.API.csproj",
               "RelativeToolTip": "src\\NexusFlow.API\\NexusFlow.API.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-06-28T07:24:07.67Z"
+              "WhenOpened": "2026-06-28T07:24:07.67Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 87,
               "Title": "NexusFlow.Infrastructure.csproj",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Infrastructure\\NexusFlow.Infrastructure.csproj",
               "RelativeDocumentMoniker": "src\\NexusFlow.Infrastructure\\NexusFlow.Infrastructure.csproj",

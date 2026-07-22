@@ -17,7 +17,8 @@ namespace NexusFlow.Application.Services
         }
 
         public async Task CreateNotificationAsync(
-            int userId, string title, string message, NotificationType type)
+            int userId, string title, string message, NotificationType type,
+            int? relatedTaskId = null)
         {
             var notification = new Notification
             {
@@ -26,6 +27,7 @@ namespace NexusFlow.Application.Services
                 Message = message,
                 Type = type,
                 IsRead = false,
+                RelatedTaskId = relatedTaskId,
                 CreatedBy = userId
             };
 
@@ -48,7 +50,8 @@ namespace NexusFlow.Application.Services
                     Message = n.Message,
                     IsRead = n.IsRead,
                     Type = n.Type.ToString(),
-                    CreatedAt = n.CreatedAt
+                    CreatedAt = n.CreatedAt,
+                    RelatedTaskId = n.RelatedTaskId
                 })
                 .ToList();
 

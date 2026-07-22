@@ -103,6 +103,11 @@ namespace NexusFlow.Infrastructure.Migrations
                     b.Property<int>("TaskId")
                         .HasColumnType("int");
 
+                    b.Property<int>("Type")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(1);
+
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
 
@@ -193,6 +198,9 @@ namespace NexusFlow.Infrastructure.Migrations
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
+                    b.Property<int?>("RelatedTaskId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasMaxLength(200)
@@ -211,6 +219,8 @@ namespace NexusFlow.Infrastructure.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("RelatedTaskId");
 
                     b.HasIndex("UserId");
 
@@ -369,6 +379,10 @@ namespace NexusFlow.Infrastructure.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AssignmentNote")
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -731,11 +745,18 @@ namespace NexusFlow.Infrastructure.Migrations
 
             modelBuilder.Entity("NexusFlow.Domain.Entities.Notification", b =>
                 {
+                    b.HasOne("NexusFlow.Domain.Entities.ProjectTask", "RelatedTask")
+                        .WithMany()
+                        .HasForeignKey("RelatedTaskId")
+                        .OnDelete(DeleteBehavior.NoAction);
+
                     b.HasOne("NexusFlow.Domain.Entities.User", "User")
                         .WithMany("Notifications")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("RelatedTask");
 
                     b.Navigation("User");
                 });
