@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
 import { ApiResponse } from '../models/auth.models';
-import { CreateCommentRequest, TaskComment } from '../models/comment.models';
+import { CreateCommentRequest, RequestClarificationRequest, RespondClarificationRequest, TaskComment } from '../models/comment.models';
 
 @Injectable({ providedIn: 'root' })
 export class CommentService {
@@ -21,5 +21,12 @@ export class CommentService {
 
   delete(id: number): Observable<ApiResponse<boolean>> {
     return this.http.delete<ApiResponse<boolean>>(`${this.baseUrl}/${id}`);
+  }
+  requestClarification(taskId: number, request: RequestClarificationRequest): Observable<ApiResponse<TaskComment>> {
+    return this.http.post<ApiResponse<TaskComment>>(`${this.baseUrl}/task/${taskId}/clarification`, request);
+  }
+
+  respondToClarification(taskId: number, request: RespondClarificationRequest): Observable<ApiResponse<TaskComment>> {
+    return this.http.post<ApiResponse<TaskComment>>(`${this.baseUrl}/task/${taskId}/clarification/respond`, request);
   }
 }

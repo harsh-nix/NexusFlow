@@ -51,6 +51,11 @@ export const routes: Routes = [
         loadComponent: () =>
           import('./features/tasks/task-create/task-create').then((m) => m.TaskCreateComponent),
       },
+      {
+        path: 'projects/:projectId/tasks/:taskId',
+        loadComponent: () =>
+          import('./features/tasks/task-details/task-details').then((m) => m.TaskDetailsComponent),
+      },
     ],
   },
   { path: '**', redirectTo: 'login' },

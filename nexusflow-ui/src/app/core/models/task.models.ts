@@ -12,6 +12,7 @@ export interface ProjectTask {
   assigneeNames: string[];
   subTaskCount: number;
   commentCount: number;
+  assignmentNote: string | null;
 }
 
 // Must match NexusFlow.Domain.Enums.TaskPriority exactly:
@@ -109,4 +110,17 @@ export interface UpdateTaskRequest {
   status: TaskStatusEnum;
   priority: TaskPriority;
   dueDate?: string;
+}
+export interface UpdateTaskStatusRequest {
+  status: TaskStatusEnum;
+  note?: string;
+}
+
+export interface TaskActivity {
+  action: string;
+  oldValue: string | null;
+  newValue: string | null;
+  userId: number;
+  userName: string;
+  createdAt: string;
 }

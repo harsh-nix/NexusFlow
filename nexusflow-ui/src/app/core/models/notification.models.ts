@@ -5,4 +5,5 @@ export interface AppNotification {
   isRead: boolean;
   type: string;
   createdAt: string;
+  relatedTaskId: number | null;
 }
