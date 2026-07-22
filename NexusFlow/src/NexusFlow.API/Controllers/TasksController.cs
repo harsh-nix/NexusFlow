@@ -59,5 +59,27 @@ namespace NexusFlow.API.Controllers
             var result = await _taskService.DeleteAsync(id, GetUserId());
             return StatusCode(result.StatusCode, result);
         }
+
+        [HttpPost("{id}/accept")]
+        public async Task<IActionResult> Accept(int id)
+        {
+            var result = await _taskService.AcceptTaskAsync(id, GetUserId());
+            return StatusCode(result.StatusCode, result);
+        }
+
+        [HttpPut("{id}/status")]
+        public async Task<IActionResult> UpdateStatus(
+            int id, [FromBody] UpdateTaskStatusDto dto)
+        {
+            var result = await _taskService.UpdateStatusAsync(id, dto, GetUserId());
+            return StatusCode(result.StatusCode, result);
+        }
+
+        [HttpGet("{id}/activity")]
+        public async Task<IActionResult> GetActivity(int id)
+        {
+            var result = await _taskService.GetActivityAsync(id);
+            return StatusCode(result.StatusCode, result);
+        }
     }
 }

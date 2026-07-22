@@ -4,6 +4,8 @@ using NexusFlow.API.Extensions;
 using NexusFlow.API.Filters;
 using NexusFlow.API.Middleware;
 using NexusFlow.Application.Mappings;
+using NexusFlow.Application.Services;
+using NexusFlow.Application.Services.Interfaces;
 using NexusFlow.Application.Validators.Auth;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -22,6 +24,8 @@ builder.Services.AddJwtAuthentication(builder.Configuration);
 builder.Services.AddCorsPolicy(builder.Configuration);
 builder.Services.AddRepositories();
 builder.Services.AddApplicationServices();
+builder.Services.AddScoped<ITaskService, TaskService>();
+builder.Services.AddScoped<IAuditLogService, AuditLogService>();
 
 // AutoMapper — scans the Application assembly for all Profile classes
 // (ProjectProfile, TaskProfile, CommentProfile, NotificationProfile, UserProfile, AuthProfile)

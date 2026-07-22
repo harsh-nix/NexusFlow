@@ -43,5 +43,21 @@ namespace NexusFlow.API.Controllers
             var result = await _commentService.DeleteAsync(id, GetUserId());
             return StatusCode(result.StatusCode, result);
         }
+
+        [HttpPost("task/{taskId}/clarification")]
+        public async Task<IActionResult> RequestClarification(
+            int taskId, [FromBody] RequestClarificationDto dto)
+        {
+            var result = await _commentService.RequestClarificationAsync(taskId, dto, GetUserId());
+            return StatusCode(result.StatusCode, result);
+        }
+
+        [HttpPost("task/{taskId}/clarification/respond")]
+        public async Task<IActionResult> RespondToClarification(
+            int taskId, [FromBody] RespondClarificationDto dto)
+        {
+            var result = await _commentService.RespondToClarificationAsync(taskId, dto, GetUserId());
+            return StatusCode(result.StatusCode, result);
+        }
     }
 }

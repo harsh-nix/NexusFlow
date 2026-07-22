@@ -692,6 +692,12 @@
               ],
               "format": "int32"
             }
+          },
+          "assignmentNote": {
+            "type": [
+              "null",
+              "string"
+            ]
           }
         }
       },

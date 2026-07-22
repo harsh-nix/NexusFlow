@@ -1,0 +1,37 @@
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.OpenApi.Models;
+
+namespace NexusFlow.API.Extensions
+{
+    public static class OpenApiExtensions
+    {
+        // Registers Swagger/OpenAPI services. Safe to call before builder.Build().
+        public static IServiceCollection AddOpenApi(this IServiceCollection services)
+        {
+            services.AddEndpointsApiExplorer();
+            services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "NexusFlow API",
+                    Version = "v1"
+                });
+            });
+
+            return services;
+        }
+
+        // Configures Swagger middleware. Call this on the WebApplication instance after Build().
+        public static WebApplication MapOpenApi(this WebApplication app)
+        {
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "NexusFlow API v1");
+            });
+
+            return app;
+        }
+    }
+}
