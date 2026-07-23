@@ -62,6 +62,7 @@ export class TaskCreateComponent implements OnInit {
       priority: [TaskPriority.Medium, Validators.required],
       dueDate: [null],
       assigneeIds: [[]], // holds an array of selected user IDs
+      assignmentNote: [''], // holds an array of selected user IDs
     });
   }
 
@@ -93,6 +94,7 @@ export class TaskCreateComponent implements OnInit {
         dueDate: raw.dueDate ? new Date(raw.dueDate).toISOString() : undefined,
         projectId: this.projectId,
         assigneeIds: raw.assigneeIds || [],
+        assignmentNote: raw.assignmentNote || undefined,
       })
       .subscribe({
         next: (res) => {

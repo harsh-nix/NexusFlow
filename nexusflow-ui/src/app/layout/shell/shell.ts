@@ -1,6 +1,6 @@
 import { Component, OnInit, signal, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
@@ -9,6 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { AuthService } from '../../core/services/auth.service';
 import { NotificationService } from '../../core/services/notification.service';
+import { TaskService } from '../../core/services/task.service';
 import { AppNotification } from '../../core/models/notification.models';
 import { FooterComponent } from '../footer/footer';
 
@@ -49,7 +50,12 @@ export class ShellComponent implements OnInit {
     return (first + last).toUpperCase();
   });
 
-  constructor(public authService: AuthService, private notificationService: NotificationService) {}
+constructor(
+    public authService: AuthService,
+    private notificationService: NotificationService,
+    private taskService: TaskService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.loadNotifications();
@@ -64,17 +70,27 @@ export class ShellComponent implements OnInit {
   }
 
   onNotificationClick(notification: AppNotification): void {
-    if (notification.isRead) return;
+    if (!notification.isRead) {
+      this.notificationService.markAsRead(notification.id).subscribe({
+        next: (res) => {
+          if (res.success) {
+            this.notifications.update((list) =>
+              list.map((n) => (n.id === notification.id ? { ...n, isRead: true } : n))
+            );
+          }
+        },
+      });
+    }
 
-    this.notificationService.markAsRead(notification.id).subscribe({
-      next: (res) => {
-        if (res.success) {
-          this.notifications.update((list) =>
-            list.map((n) => (n.id === notification.id ? { ...n, isRead: true } : n))
-          );
-        }
-      },
-    });
+    if (notification.relatedTaskId) {
+      this.taskService.getById(notification.relatedTaskId).subscribe({
+        next: (res) => {
+          if (res.success) {
+            this.router.navigate(['/projects', res.data.projectId, 'tasks', notification.relatedTaskId]);
+          }
+        },
+      });
+    }
   }
 
   onMarkAllAsRead(): void {

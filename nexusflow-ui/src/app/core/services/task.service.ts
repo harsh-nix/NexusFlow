@@ -18,6 +18,9 @@ export class TaskService {
   getByProject(projectId: number): Observable<ApiResponse<ProjectTask[]>> {
     return this.http.get<ApiResponse<ProjectTask[]>>(`${this.baseUrl}/project/${projectId}`);
   }
+  getMyTasks(): Observable<ApiResponse<ProjectTask[]>> {
+    return this.http.get<ApiResponse<ProjectTask[]>>(`${this.baseUrl}/my`);
+  }
 
   create(request: CreateTaskRequest): Observable<ApiResponse<ProjectTask>> {
     return this.http.post<ApiResponse<ProjectTask>>(this.baseUrl, request);

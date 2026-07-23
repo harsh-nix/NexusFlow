@@ -44,6 +44,12 @@ namespace NexusFlow.API.Controllers
             var result = await _taskService.GetByProjectAsync(projectId);
             return StatusCode(result.StatusCode, result);
         }
+        [HttpGet("my")]
+        public async Task<IActionResult> GetMyTasks()
+        {
+            var result = await _taskService.GetMyTasksAsync(GetUserId());
+            return StatusCode(result.StatusCode, result);
+        }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(

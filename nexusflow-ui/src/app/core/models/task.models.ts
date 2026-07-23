@@ -102,6 +102,7 @@ export interface CreateTaskRequest {
   dueDate?: string;
   projectId: number;
   assigneeIds: number[];
+  assignmentNote?: string;
 }
 
 export interface UpdateTaskRequest {

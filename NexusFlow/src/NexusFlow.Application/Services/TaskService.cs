@@ -107,6 +107,24 @@ namespace NexusFlow.Application.Services
 
             return ApiResponse<List<TaskDto>>.Ok(result);
         }
+        public async Task<ApiResponse<List<TaskDto>>> GetMyTasksAsync(int userId)
+        {
+            var myAssignments = await _unitOfWork.Repository<TaskAssignee>()
+                .FindAsync(a => a.UserId == userId && !a.IsDeleted);
+            var assignedTaskIds = myAssignments.Select(a => a.TaskId).ToHashSet();
+
+            var tasks = await _unitOfWork.Repository<ProjectTask>()
+                .FindAsync(t => !t.IsDeleted && (t.CreatedBy == userId || assignedTaskIds.Contains(t.Id)));
+
+            var result = new List<TaskDto>();
+
+            foreach (var task in tasks)
+            {
+                result.Add(await EnrichAsync(_mapper.Map<TaskDto>(task), task));
+            }
+
+            return ApiResponse<List<TaskDto>>.Ok(result);
+        }
 
         public async Task<ApiResponse<TaskDto>> UpdateAsync(
             int id, UpdateTaskDto dto, int userId)

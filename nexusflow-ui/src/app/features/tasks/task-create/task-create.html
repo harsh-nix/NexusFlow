@@ -36,6 +36,15 @@
             }
           </mat-select>
         </mat-form-field>
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Assignment Note (optional)</mat-label>
+          <textarea
+            matInput
+            formControlName="assignmentNote"
+            rows="2"
+            placeholder="Give the assignee context before they see the discussion thread."
+          ></textarea>
+        </mat-form-field>
 
         <mat-form-field appearance="outline" class="full-width">
           <mat-label>Due Date</mat-label>
