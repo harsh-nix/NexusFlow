@@ -33,6 +33,10 @@ export class ProjectsListComponent implements OnInit {
 
   // Exposed so the template can call this directly: [ngClass]="statusChipClass(project.status)"
   statusChipClass = projectStatusChipClass;
+  progressPercent(project: Project): number {
+    if (project.taskCount === 0) return 0;
+    return Math.round((project.completedTaskCount / project.taskCount) * 100);
+  }
 
   constructor(
     private projectService: ProjectService,

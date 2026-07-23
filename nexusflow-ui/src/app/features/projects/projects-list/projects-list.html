@@ -50,6 +50,13 @@
             </span>
           </div>
 
+          <div class="progress-row">
+            <div class="progress-track">
+              <div class="progress-fill" [style.width.%]="progressPercent(project)"></div>
+            </div>
+            <span class="progress-label">{{ progressPercent(project) }}% complete</span>
+          </div>
+
           <div class="card-actions">
             <a mat-button color="primary" [routerLink]="['/projects', project.id, 'tasks']">View Tasks</a>
             <span class="spacer"></span>

@@ -402,6 +402,16 @@
   },
   {
     "ContainingType": "NexusFlow.API.Controllers.TasksController",
+    "Method": "GetMyTasks",
+    "RelativePath": "api/Tasks/my",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NexusFlow.API.Controllers.TasksController",
     "Method": "GetByProject",
     "RelativePath": "api/Tasks/project/{projectId}",
     "HttpMethod": "GET",

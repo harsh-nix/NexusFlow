@@ -88,7 +88,25 @@ namespace NexusFlow.Application.Services
             var projects = await _unitOfWork.Repository<Project>()
                 .FindAsync(p => projectIds.Contains(p.Id) && !p.IsDeleted);
 
-            var result = projects.Select(MapToDto).ToList();
+            var result = new List<ProjectDto>();
+
+            foreach (var project in projects)
+            {
+                var members = await _unitOfWork.Repository<ProjectMember>()
+                    .FindAsync(m => m.ProjectId == project.Id);
+
+                var tasks = await _unitOfWork.Repository<ProjectTask>()
+                    .FindAsync(t => t.ProjectId == project.Id && !t.IsDeleted);
+
+                var taskList = tasks.ToList();
+
+                var dto = MapToDto(project);
+                dto.MemberCount = members.Count();
+                dto.TaskCount = taskList.Count;
+                dto.CompletedTaskCount = taskList.Count(t => t.Status == Domain.Enums.TaskStatus.Done);
+
+                result.Add(dto);
+            }
 
             return ApiResponse<List<ProjectDto>>.Ok(result);
         }

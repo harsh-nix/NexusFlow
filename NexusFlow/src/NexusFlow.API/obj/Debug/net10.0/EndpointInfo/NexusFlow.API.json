@@ -679,6 +679,18 @@
         }
       }
     },
+    "/api/Tasks/my": {
+      "get": {
+        "tags": [
+          "Tasks"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Tasks/{id}/accept": {
       "post": {
         "tags": [

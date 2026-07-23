@@ -10,6 +10,7 @@ export interface Project {
   createdAt: string;
   memberCount: number;
   taskCount: number;
+  completedTaskCount: number;
 }
 
 export interface CreateProjectRequest {
