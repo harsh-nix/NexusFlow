@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CC3CEBF1-53E1-39FE-3F33-A3B083608876}|src\\NexusFlow.Application\\NexusFlow.Application.csproj|c:\\users\\harsh\\documents\\full_stack\\03_projects\\nexusflow\\nexusflow\\src\\nexusflow.application\\services\\subtaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC3CEBF1-53E1-39FE-3F33-A3B083608876}|src\\NexusFlow.Application\\NexusFlow.Application.csproj|solutionrelative:src\\nexusflow.application\\services\\subtaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC3CEBF1-53E1-39FE-3F33-A3B083608876}|src\\NexusFlow.Application\\NexusFlow.Application.csproj|c:\\users\\harsh\\documents\\full_stack\\03_projects\\nexusflow\\nexusflow\\src\\nexusflow.application\\services\\interfaces\\isubtaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC3CEBF1-53E1-39FE-3F33-A3B083608876}|src\\NexusFlow.Application\\NexusFlow.Application.csproj|solutionrelative:src\\nexusflow.application\\services\\interfaces\\isubtaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CC3CEBF1-53E1-39FE-3F33-A3B083608876}|src\\NexusFlow.Application\\NexusFlow.Application.csproj|c:\\users\\harsh\\documents\\full_stack\\03_projects\\nexusflow\\nexusflow\\src\\nexusflow.application\\mappings\\subtaskprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC3CEBF1-53E1-39FE-3F33-A3B083608876}|src\\NexusFlow.Application\\NexusFlow.Application.csproj|solutionrelative:src\\nexusflow.application\\mappings\\subtaskprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -39,6 +47,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "SubTaskService.cs",
+              "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Services\\SubTaskService.cs",
+              "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Services\\SubTaskService.cs",
+              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Services\\SubTaskService.cs",
+              "RelativeToolTip": "src\\NexusFlow.Application\\Services\\SubTaskService.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAYwJ8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-27T16:31:06.034Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ISubTaskService.cs",
+              "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Services\\Interfaces\\ISubTaskService.cs",
+              "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Services\\Interfaces\\ISubTaskService.cs",
+              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Services\\Interfaces\\ISubTaskService.cs",
+              "RelativeToolTip": "src\\NexusFlow.Application\\Services\\Interfaces\\ISubTaskService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-27T16:30:45.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "SubTaskProfile.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Mappings\\SubTaskProfile.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Mappings\\SubTaskProfile.cs",
@@ -51,7 +85,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "UpdateSubTaskDtoValidator.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Validators\\Tasks\\UpdateSubTaskDtoValidator.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Validators\\Tasks\\UpdateSubTaskDtoValidator.cs",
@@ -59,12 +93,11 @@
               "RelativeToolTip": "src\\NexusFlow.Application\\Validators\\Tasks\\UpdateSubTaskDtoValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-27T16:28:12.941Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-27T16:28:12.941Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "CreateSubTaskDtoValidator.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Validators\\Tasks\\CreateSubTaskDtoValidator.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Validators\\Tasks\\CreateSubTaskDtoValidator.cs",
@@ -72,12 +105,11 @@
               "RelativeToolTip": "src\\NexusFlow.Application\\Validators\\Tasks\\CreateSubTaskDtoValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-27T16:27:54.723Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-27T16:27:54.723Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "UpdateSubTaskDto.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\DTOs\\Tasks\\UpdateSubTaskDto.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\DTOs\\Tasks\\UpdateSubTaskDto.cs",
@@ -85,12 +117,11 @@
               "RelativeToolTip": "src\\NexusFlow.Application\\DTOs\\Tasks\\UpdateSubTaskDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-27T16:27:26.426Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-27T16:27:26.426Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "CreateSubTaskDto.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\DTOs\\Tasks\\CreateSubTaskDto.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\DTOs\\Tasks\\CreateSubTaskDto.cs",
@@ -98,12 +129,11 @@
               "RelativeToolTip": "src\\NexusFlow.Application\\DTOs\\Tasks\\CreateSubTaskDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-27T16:27:09.48Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-27T16:27:09.48Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "SubTaskDto.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\DTOs\\Tasks\\SubTaskDto.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\DTOs\\Tasks\\SubTaskDto.cs",
@@ -111,8 +141,7 @@
               "RelativeToolTip": "src\\NexusFlow.Application\\DTOs\\Tasks\\SubTaskDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-27T16:26:46.925Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-27T16:26:46.925Z"
             }
           ]
         }
