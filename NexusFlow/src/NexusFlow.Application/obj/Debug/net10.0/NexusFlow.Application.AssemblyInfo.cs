@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NexusFlow.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8b714dd786c065249ce1aa6cca8316bf8d5b75a6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+029a716caa716a81e8741e84a2ac5a5108623416")]
 [assembly: System.Reflection.AssemblyProductAttribute("NexusFlow.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NexusFlow.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
