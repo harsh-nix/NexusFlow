@@ -157,6 +157,18 @@ namespace NexusFlow.Infrastructure.Data
                       .HasForeignKey(e => e.ParentTaskId)
                       .OnDelete(DeleteBehavior.Cascade);
             });
+            // FileAttachment
+            modelBuilder.Entity<FileAttachment>(entity =>
+            {
+                entity.HasKey(e => e.Id);
+                entity.Property(e => e.OriginalFileName).IsRequired().HasMaxLength(255);
+                entity.Property(e => e.StoredFileName).IsRequired().HasMaxLength(255);
+                entity.Property(e => e.ContentType).IsRequired().HasMaxLength(100);
+                entity.HasOne(e => e.Task)
+                      .WithMany(t => t.Attachments)
+                      .HasForeignKey(e => e.TaskId)
+                      .OnDelete(DeleteBehavior.Cascade);
+            });
 
             // TaskAssignee
             modelBuilder.Entity<TaskAssignee>(entity =>
