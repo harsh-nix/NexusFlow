@@ -130,6 +130,23 @@
   gap: var(--nf-space-3);
   flex-wrap: wrap;
 }
+.subtask-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+}
+
+.subtask-title {
+  flex: 1;
+  font-size: 0.875rem;
+  color: var(--nf-ink);
+}
+
+.subtask-title--done {
+  text-decoration: line-through;
+  color: var(--nf-ink-faint);
+}
 
 .status-field {
   width: 180px;

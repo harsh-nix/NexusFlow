@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NexusFlow.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8bf1f27d090978ef0c16b72d841133993b3409b0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e5123bd6e096d02b4eb8510ed0db09034a32a8fa")]
 [assembly: System.Reflection.AssemblyProductAttribute("NexusFlow.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NexusFlow.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

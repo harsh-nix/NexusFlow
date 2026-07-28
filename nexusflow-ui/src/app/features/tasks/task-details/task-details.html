@@ -93,6 +93,39 @@
         </button>
       </form>
     </mat-card>
+    <mat-card class="detail-card">
+      <h3>Sub-Tasks</h3>
+
+      @if (isLoadingSubTasks()) {
+        <p class="meta-empty">Loading sub-tasks...</p>
+      } @else {
+        @for (subTask of subTasks(); track subTask.id) {
+          <div class="subtask-item">
+            <mat-checkbox
+              [checked]="subTask.isCompleted"
+              (change)="toggleSubTask(subTask)"
+            ></mat-checkbox>
+            <span class="subtask-title" [class.subtask-title--done]="subTask.isCompleted">
+              {{ subTask.title }}
+            </span>
+            <button mat-icon-button color="warn" (click)="deleteSubTask(subTask)" aria-label="Remove sub-task">
+              <mat-icon>close</mat-icon>
+            </button>
+          </div>
+        } @empty {
+          <p class="meta-empty">No sub-tasks yet — break this task down below.</p>
+        }
+      }
+
+      <form [formGroup]="subTaskForm" (ngSubmit)="addSubTask()" class="comment-input-row">
+        <mat-form-field appearance="outline" class="comment-input">
+          <input matInput formControlName="title" placeholder="Add a sub-task..." />
+        </mat-form-field>
+        <button mat-icon-button color="primary" type="submit" [disabled]="isAddingSubTask()">
+          <mat-icon>add</mat-icon>
+        </button>
+      </form>
+    </mat-card>
 
     <mat-card class="detail-card">
       <h3>Discussion</h3>

@@ -9,6 +9,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { TaskService } from '../../../core/services/task.service';
 import { CommentService } from '../../../core/services/comment.service';
 import { AuthService, StoredUser } from '../../../core/services/auth.service';
@@ -22,6 +23,8 @@ import {
   taskStatusChipClass,
 } from '../../../core/models/task.models';
 import { TaskComment } from '../../../core/models/comment.models';
+import { SubTask } from '../../../core/models/subtask.models';
+import { SubTaskService } from '../../../core/services/subtask.service';
 
 @Component({
   selector: 'app-task-details',
@@ -37,6 +40,7 @@ import { TaskComment } from '../../../core/models/comment.models';
     MatSelectModule,
     MatIconModule,
     MatProgressSpinnerModule,
+    MatCheckboxModule,
   ],
   templateUrl: './task-details.html',
   styleUrl: './task-details.css',
@@ -47,10 +51,13 @@ export class TaskDetailsComponent implements OnInit {
 
   task = signal<ProjectTask | null>(null);
   comments = signal<TaskComment[]>([]);
+  subTasks = signal<SubTask[]>([]);
   activity = signal<TaskActivity[]>([]);
 
   isLoadingTask = signal(true);
   isLoadingComments = signal(true);
+  isLoadingSubTasks = signal(true);
+  isAddingSubTask = signal(false);
   isLoadingActivity = signal(true);
 
   isAccepting = signal(false);
@@ -68,6 +75,7 @@ export class TaskDetailsComponent implements OnInit {
 
   statusForm: FormGroup;
   commentForm: FormGroup;
+  subTaskForm: FormGroup;
   clarificationForm: FormGroup;
   responseForm: FormGroup;
 
@@ -87,6 +95,7 @@ export class TaskDetailsComponent implements OnInit {
     private router: Router,
     private taskService: TaskService,
     private commentService: CommentService,
+    private subTaskService: SubTaskService,
     private authService: AuthService
   ) {
     this.currentUser = this.authService.currentUser;
@@ -100,6 +109,9 @@ export class TaskDetailsComponent implements OnInit {
 
     this.commentForm = this.fb.group({
       content: ['', Validators.required],
+    });
+    this.subTaskForm = this.fb.group({
+      title: ['', Validators.required],
     });
 
     this.clarificationForm = this.fb.group({
@@ -115,6 +127,7 @@ export class TaskDetailsComponent implements OnInit {
     this.loadTask();
     this.loadComments();
     this.loadActivity();
+    this.loadSubTasks();
   }
 
   loadTask(): void {
@@ -146,6 +159,76 @@ export class TaskDetailsComponent implements OnInit {
         }
       },
       error: () => this.isLoadingComments.set(false),
+    });
+  }
+  loadSubTasks(): void {
+    this.isLoadingSubTasks.set(true);
+    this.subTaskService.getByTask(this.taskId).subscribe({
+      next: (res) => {
+        this.isLoadingSubTasks.set(false);
+        if (res.success) {
+          this.subTasks.set(res.data);
+        }
+      },
+      error: () => this.isLoadingSubTasks.set(false),
+    });
+  }
+
+  addSubTask(): void {
+    if (this.subTaskForm.invalid) {
+      this.subTaskForm.markAllAsTouched();
+      return;
+    }
+
+    this.isAddingSubTask.set(true);
+    this.errorMessage.set(null);
+
+    this.subTaskService
+      .create(this.taskId, { title: this.subTaskForm.value.title })
+      .subscribe({
+        next: (res) => {
+          this.isAddingSubTask.set(false);
+          if (res.success) {
+            this.subTaskForm.reset();
+            this.loadSubTasks();
+          } else {
+            this.errorMessage.set(res.message);
+          }
+        },
+        error: (err) => {
+          this.isAddingSubTask.set(false);
+          this.errorMessage.set(this.extractError(err));
+        },
+      });
+  }
+
+  toggleSubTask(subTask: SubTask): void {
+    this.subTaskService
+      .update(subTask.id, { title: subTask.title, isCompleted: !subTask.isCompleted })
+      .subscribe({
+        next: (res) => {
+          if (res.success) {
+            this.loadSubTasks();
+            this.loadActivity();
+          } else {
+            this.errorMessage.set(res.message);
+          }
+        },
+        error: (err) => this.errorMessage.set(this.extractError(err)),
+      });
+  }
+
+  deleteSubTask(subTask: SubTask): void {
+    this.subTaskService.delete(subTask.id).subscribe({
+      next: (res) => {
+        if (res.success) {
+          this.loadSubTasks();
+          this.loadActivity();
+        } else {
+          this.errorMessage.set(res.message);
+        }
+      },
+      error: (err) => this.errorMessage.set(this.extractError(err)),
     });
   }
 
