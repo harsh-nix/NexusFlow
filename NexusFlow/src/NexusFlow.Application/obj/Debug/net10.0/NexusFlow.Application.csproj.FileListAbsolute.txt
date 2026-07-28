@@ -1,0 +1,16 @@
+C:\Users\Harsh\Documents\Full_Stack\03_Projects\NexusFlow\NexusFlow\src\NexusFlow.Application\bin\Debug\net10.0\NexusFlow.Application.deps.json
+C:\Users\Harsh\Documents\Full_Stack\03_Projects\NexusFlow\NexusFlow\src\NexusFlow.Application\bin\Debug\net10.0\NexusFlow.Application.dll
+C:\Users\Harsh\Documents\Full_Stack\03_Projects\NexusFlow\NexusFlow\src\NexusFlow.Application\bin\Debug\net10.0\NexusFlow.Application.pdb
+C:\Users\Harsh\Documents\Full_Stack\03_Projects\NexusFlow\NexusFlow\src\NexusFlow.Application\bin\Debug\net10.0\NexusFlow.Domain.dll
+C:\Users\Harsh\Documents\Full_Stack\03_Projects\NexusFlow\NexusFlow\src\NexusFlow.Application\bin\Debug\net10.0\NexusFlow.Domain.pdb
+C:\Users\Harsh\Documents\Full_Stack\03_Projects\NexusFlow\NexusFlow\src\NexusFlow.Application\obj\Debug\net10.0\NexusFlow.Application.csproj.AssemblyReference.cache
+C:\Users\Harsh\Documents\Full_Stack\03_Projects\NexusFlow\NexusFlow\src\NexusFlow.Application\obj\Debug\net10.0\NexusFlow.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Harsh\Documents\Full_Stack\03_Projects\NexusFlow\NexusFlow\src\NexusFlow.Application\obj\Debug\net10.0\NexusFlow.Application.AssemblyInfoInputs.cache
+C:\Users\Harsh\Documents\Full_Stack\03_Projects\NexusFlow\NexusFlow\src\NexusFlow.Application\obj\Debug\net10.0\NexusFlow.Application.AssemblyInfo.cs
+C:\Users\Harsh\Documents\Full_Stack\03_Projects\NexusFlow\NexusFlow\src\NexusFlow.Application\obj\Debug\net10.0\NexusFlow.Application.csproj.CoreCompileInputs.cache
+C:\Users\Harsh\Documents\Full_Stack\03_Projects\NexusFlow\NexusFlow\src\NexusFlow.Application\obj\Debug\net10.0\NexusFlow.Application.sourcelink.json
+C:\Users\Harsh\Documents\Full_Stack\03_Projects\NexusFlow\NexusFlow\src\NexusFlow.Application\obj\Debug\net10.0\NexusFlo.CE2A4826.Up2Date
+C:\Users\Harsh\Documents\Full_Stack\03_Projects\NexusFlow\NexusFlow\src\NexusFlow.Application\obj\Debug\net10.0\NexusFlow.Application.dll
+C:\Users\Harsh\Documents\Full_Stack\03_Projects\NexusFlow\NexusFlow\src\NexusFlow.Application\obj\Debug\net10.0\refint\NexusFlow.Application.dll
+C:\Users\Harsh\Documents\Full_Stack\03_Projects\NexusFlow\NexusFlow\src\NexusFlow.Application\obj\Debug\net10.0\NexusFlow.Application.pdb
+C:\Users\Harsh\Documents\Full_Stack\03_Projects\NexusFlow\NexusFlow\src\NexusFlow.Application\obj\Debug\net10.0\ref\NexusFlow.Application.dll
