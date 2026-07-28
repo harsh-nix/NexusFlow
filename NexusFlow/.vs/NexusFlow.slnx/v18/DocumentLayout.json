@@ -107,7 +107,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "NexusFlow.Application",
+              "Title": "NexusFlow.Application.csproj",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\NexusFlow.Application.csproj",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\NexusFlow.Application.csproj",
               "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\NexusFlow.Application.csproj",
@@ -127,8 +127,7 @@
               "RelativeToolTip": "src\\NexusFlow.API\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-07-28T05:52:55.185Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-28T05:52:55.185Z"
             },
             {
               "$type": "Document",
@@ -140,8 +139,7 @@
               "RelativeToolTip": "src\\NexusFlow.Application\\Services\\TaskService.cs",
               "ViewState": "AgIAADUBAAAAAAAAAAAIwEIBAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-28T05:49:42.165Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-28T05:49:42.165Z"
             },
             {
               "$type": "Document",
@@ -153,8 +151,7 @@
               "RelativeToolTip": "src\\NexusFlow.Application\\Mappings\\TaskProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-28T05:47:54.517Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-28T05:47:54.517Z"
             },
             {
               "$type": "Document",
@@ -166,8 +163,7 @@
               "RelativeToolTip": "src\\NexusFlow.Application\\DTOs\\Tasks\\TaskDto.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAQwBQAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-28T05:46:49.838Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-28T05:46:49.838Z"
             },
             {
               "$type": "Document",
@@ -179,8 +175,7 @@
               "RelativeToolTip": "src\\NexusFlow.API\\Controllers\\FilesController.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAYwDgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-28T05:44:05.399Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-28T05:44:05.399Z"
             },
             {
               "$type": "Document",
@@ -240,8 +235,7 @@
               "RelativeToolTip": "src\\NexusFlow.API\\Extensions\\ServiceExtensions.cs",
               "ViewState": "AgIAAFUAAAAAAAAAAAAwwGYAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-27T16:33:49.473Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-27T16:33:49.473Z"
             },
             {
               "$type": "Document",

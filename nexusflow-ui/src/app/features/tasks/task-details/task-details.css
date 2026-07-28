@@ -147,6 +147,45 @@
   text-decoration: line-through;
   color: var(--nf-ink-faint);
 }
+.file-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--nf-border);
+}
+
+.file-item:last-of-type {
+  border-bottom: none;
+}
+
+.file-item mat-icon {
+  color: var(--nf-ink-faint);
+}
+
+.file-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.file-name {
+  font-size: 0.875rem;
+  color: var(--nf-ink);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.file-meta {
+  font-size: 0.75rem;
+  color: var(--nf-ink-faint);
+}
+
+.upload-btn {
+  margin-top: var(--nf-space-2);
+}
 
 .status-field {
   width: 180px;

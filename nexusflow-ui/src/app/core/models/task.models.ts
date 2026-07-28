@@ -11,6 +11,7 @@ export interface ProjectTask {
   createdAt: string;
   assigneeNames: string[];
   subTaskCount: number;
+  attachmentCount: number;
   commentCount: number;
   assignmentNote: string | null;
 }

@@ -126,6 +126,50 @@
         </button>
       </form>
     </mat-card>
+    <mat-card class="detail-card">
+      <h3>Files</h3>
+
+      @if (isLoadingFiles()) {
+        <p class="meta-empty">Loading files...</p>
+      } @else {
+        @for (file of files(); track file.id) {
+          <div class="file-item">
+            <mat-icon>description</mat-icon>
+            <div class="file-info">
+              <span class="file-name">{{ file.originalFileName }}</span>
+              <span class="file-meta">
+                {{ formatFileSize(file.fileSizeBytes) }} · {{ file.uploadedByName }} ·
+                {{ file.createdAt | date: 'short' }}
+              </span>
+            </div>
+            <button mat-icon-button (click)="downloadFile(file)" aria-label="Download file">
+              <mat-icon>download</mat-icon>
+            </button>
+            <button mat-icon-button color="warn" (click)="deleteFile(file)" aria-label="Delete file">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+        } @empty {
+          <p class="meta-empty">No files attached yet.</p>
+        }
+      }
+
+      <input
+        type="file"
+        #fileInput
+        style="display: none"
+        (change)="onFileSelected($event)"
+      />
+      <button
+        mat-stroked-button
+        [disabled]="isUploadingFile()"
+        (click)="fileInput.click()"
+        class="upload-btn"
+      >
+        <mat-icon>upload</mat-icon>
+        @if (isUploadingFile()) { Uploading... } @else { Attach File }
+      </button>
+    </mat-card>
 
     <mat-card class="detail-card">
       <h3>Discussion</h3>

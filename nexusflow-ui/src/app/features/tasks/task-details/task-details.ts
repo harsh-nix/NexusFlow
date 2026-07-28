@@ -25,6 +25,8 @@ import {
 import { TaskComment } from '../../../core/models/comment.models';
 import { SubTask } from '../../../core/models/subtask.models';
 import { SubTaskService } from '../../../core/services/subtask.service';
+import { TaskFile } from '../../../core/models/file.models';
+import { FileService } from '../../../core/services/file.service';
 
 @Component({
   selector: 'app-task-details',
@@ -52,12 +54,15 @@ export class TaskDetailsComponent implements OnInit {
   task = signal<ProjectTask | null>(null);
   comments = signal<TaskComment[]>([]);
   subTasks = signal<SubTask[]>([]);
+  files = signal<TaskFile[]>([]);
   activity = signal<TaskActivity[]>([]);
 
   isLoadingTask = signal(true);
   isLoadingComments = signal(true);
   isLoadingSubTasks = signal(true);
   isAddingSubTask = signal(false);
+  isLoadingFiles = signal(true);
+  isUploadingFile = signal(false);
   isLoadingActivity = signal(true);
 
   isAccepting = signal(false);
@@ -96,6 +101,7 @@ export class TaskDetailsComponent implements OnInit {
     private taskService: TaskService,
     private commentService: CommentService,
     private subTaskService: SubTaskService,
+    private fileService: FileService,
     private authService: AuthService
   ) {
     this.currentUser = this.authService.currentUser;
@@ -128,6 +134,7 @@ export class TaskDetailsComponent implements OnInit {
     this.loadComments();
     this.loadActivity();
     this.loadSubTasks();
+    this.loadFiles();
   }
 
   loadTask(): void {
@@ -230,6 +237,79 @@ export class TaskDetailsComponent implements OnInit {
       },
       error: (err) => this.errorMessage.set(this.extractError(err)),
     });
+  }
+  loadFiles(): void {
+    this.isLoadingFiles.set(true);
+    this.fileService.getByTask(this.taskId).subscribe({
+      next: (res) => {
+        this.isLoadingFiles.set(false);
+        if (res.success) {
+          this.files.set(res.data);
+        }
+      },
+      error: () => this.isLoadingFiles.set(false),
+    });
+  }
+
+  onFileSelected(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    const file = input.files?.[0];
+    if (!file) return;
+
+    this.isUploadingFile.set(true);
+    this.errorMessage.set(null);
+
+    this.fileService.upload(this.taskId, file).subscribe({
+      next: (res) => {
+        this.isUploadingFile.set(false);
+        input.value = '';
+        if (res.success) {
+          this.loadFiles();
+          this.loadActivity();
+        } else {
+          this.errorMessage.set(res.message);
+        }
+      },
+      error: (err) => {
+        this.isUploadingFile.set(false);
+        input.value = '';
+        this.errorMessage.set(this.extractError(err));
+      },
+    });
+  }
+
+  downloadFile(file: TaskFile): void {
+    this.fileService.download(file.id).subscribe({
+      next: (blob) => {
+        const url = window.URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = file.originalFileName;
+        link.click();
+        window.URL.revokeObjectURL(url);
+      },
+      error: (err) => this.errorMessage.set(this.extractError(err)),
+    });
+  }
+
+  deleteFile(file: TaskFile): void {
+    this.fileService.delete(file.id).subscribe({
+      next: (res) => {
+        if (res.success) {
+          this.loadFiles();
+          this.loadActivity();
+        } else {
+          this.errorMessage.set(res.message);
+        }
+      },
+      error: (err) => this.errorMessage.set(this.extractError(err)),
+    });
+  }
+
+  formatFileSize(bytes: number): string {
+    if (bytes < 1024) return `${bytes} B`;
+    if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
+    return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
   }
 
   loadActivity(): void {
