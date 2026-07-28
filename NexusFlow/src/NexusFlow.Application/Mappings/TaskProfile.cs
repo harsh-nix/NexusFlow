@@ -19,6 +19,8 @@ namespace NexusFlow.Application.Mappings
                     opt => opt.Ignore()) // set manually in service — requires Assignees include/lookup
                 .ForMember(dest => dest.SubTaskCount,
                     opt => opt.Ignore()) // set manually in service — requires separate query
+                .ForMember(dest => dest.AttachmentCount,
+                    opt => opt.Ignore()) // set manually in service — requires separate query
                 .ForMember(dest => dest.CommentCount,
                     opt => opt.Ignore()); // set manually in service — requires separate query
 

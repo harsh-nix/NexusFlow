@@ -18,6 +18,7 @@ namespace NexusFlow.Application.DTOs.Tasks
         public DateTime CreatedAt { get; set; }
         public List<string> AssigneeNames { get; set; } = new();
         public int SubTaskCount { get; set; }
+        public int AttachmentCount { get; set; }
         public int CommentCount { get; set; }
         public string? AssignmentNote { get; set; }
     }

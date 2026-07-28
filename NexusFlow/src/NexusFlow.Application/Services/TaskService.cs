@@ -318,6 +318,9 @@ namespace NexusFlow.Application.Services
             var subTasks = await _unitOfWork.Repository<SubTask>()
                 .FindAsync(s => s.ParentTaskId == task.Id && !s.IsDeleted);
             dto.SubTaskCount = subTasks.Count();
+            var attachments = await _unitOfWork.Repository<FileAttachment>()
+                .FindAsync(f => f.TaskId == task.Id && !f.IsDeleted);
+            dto.AttachmentCount = attachments.Count();
 
             // Only count plain discussion comments here — Clarification /
             // ClarificationResponse / WorkLog entries are part of the same

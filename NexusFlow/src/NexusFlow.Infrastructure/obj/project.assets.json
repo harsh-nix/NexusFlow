@@ -1325,7 +1325,10 @@
         },
         "runtime": {
           "bin/placeholder/NexusFlow.Application.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "NexusFlow.Domain/1.0.0": {
         "type": "project",
