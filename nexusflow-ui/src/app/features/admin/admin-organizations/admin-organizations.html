@@ -1,0 +1,211 @@
+<div class="page-container">
+  <div class="page-header">
+    <div>
+      <h1>Organizations</h1>
+      <div class="breadcrumb">
+        <a (click)="backToOrgs()" [class.breadcrumb--active]="view() === 'orgs'">Organizations</a>
+        @if (selectedOrg()) {
+          <span> / </span>
+          <a (click)="backToDepartments()" [class.breadcrumb--active]="view() === 'departments'">
+            {{ selectedOrg()!.name }}
+          </a>
+        }
+        @if (selectedDept()) {
+          <span> / </span>
+          <span class="breadcrumb--active">{{ selectedDept()!.name }}</span>
+        }
+      </div>
+    </div>
+  </div>
+
+  @if (errorMessage()) {
+    <p class="error-text">{{ errorMessage() }}</p>
+  }
+  @if (successMessage()) {
+    <p class="success-text">{{ successMessage() }}</p>
+  }
+
+  @if (isLoading()) {
+    <div class="page-loading">
+      <p>Loading...</p>
+    </div>
+  } @else {
+    <!-- ---------- Organizations level ---------- -->
+    @if (view() === 'orgs') {
+      <button mat-raised-button color="primary" (click)="toggleOrgForm()" class="add-btn">
+        <mat-icon>{{ showOrgForm() ? 'close' : 'add' }}</mat-icon>
+        {{ showOrgForm() ? 'Cancel' : 'New Organization' }}
+      </button>
+
+      @if (showOrgForm()) {
+        <mat-card class="detail-card">
+          <form [formGroup]="orgForm" (ngSubmit)="submitOrg()" class="inline-form">
+            <mat-form-field appearance="outline">
+              <mat-label>Name</mat-label>
+              <input matInput formControlName="name" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Website (optional)</mat-label>
+              <input matInput formControlName="website" />
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="wide-field">
+              <mat-label>Description (optional)</mat-label>
+              <input matInput formControlName="description" />
+            </mat-form-field>
+            <button mat-raised-button color="primary" type="submit" [disabled]="isSaving()">
+              Create
+            </button>
+          </form>
+        </mat-card>
+      }
+
+      <div class="card-grid">
+        @for (org of organizations(); track org.id) {
+          <mat-card class="entity-card">
+            <h3>{{ org.name }}</h3>
+            @if (org.description) {
+              <p class="entity-desc">{{ org.description }}</p>
+            }
+            <div class="entity-meta">
+              <span>{{ org.departmentCount }} departments</span>
+              <span>{{ org.userCount }} users</span>
+            </div>
+            <div class="entity-actions">
+              <button mat-button color="primary" (click)="openDepartments(org)">
+                View Departments <mat-icon>arrow_forward</mat-icon>
+              </button>
+              <button mat-icon-button color="warn" (click)="deleteOrg(org)" aria-label="Delete organization">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </div>
+          </mat-card>
+        } @empty {
+          <p class="meta-empty">No organizations yet.</p>
+        }
+      </div>
+    }
+
+    <!-- ---------- Departments level ---------- -->
+    @if (view() === 'departments') {
+      <button mat-raised-button color="primary" (click)="toggleDeptForm()" class="add-btn">
+        <mat-icon>{{ showDeptForm() ? 'close' : 'add' }}</mat-icon>
+        {{ showDeptForm() ? 'Cancel' : 'New Department' }}
+      </button>
+
+      @if (showDeptForm()) {
+        <mat-card class="detail-card">
+          <form [formGroup]="deptForm" (ngSubmit)="submitDept()" class="inline-form">
+            <mat-form-field appearance="outline">
+              <mat-label>Name</mat-label>
+              <input matInput formControlName="name" />
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="wide-field">
+              <mat-label>Description (optional)</mat-label>
+              <input matInput formControlName="description" />
+            </mat-form-field>
+            <button mat-raised-button color="primary" type="submit" [disabled]="isSaving()">
+              Create
+            </button>
+          </form>
+        </mat-card>
+      }
+
+      <div class="card-grid">
+        @for (dept of departments(); track dept.id) {
+          <mat-card class="entity-card">
+            <h3>{{ dept.name }}</h3>
+            @if (dept.description) {
+              <p class="entity-desc">{{ dept.description }}</p>
+            }
+            <div class="entity-meta">
+              <span>{{ dept.teamCount }} teams</span>
+            </div>
+            <div class="entity-actions">
+              <button mat-button color="primary" (click)="openTeams(dept)">
+                View Teams <mat-icon>arrow_forward</mat-icon>
+              </button>
+              <button mat-icon-button color="warn" (click)="deleteDept(dept)" aria-label="Delete department">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </div>
+          </mat-card>
+        } @empty {
+          <p class="meta-empty">No departments yet.</p>
+        }
+      </div>
+    }
+
+    <!-- ---------- Teams level ---------- -->
+    @if (view() === 'teams') {
+      <button mat-raised-button color="primary" (click)="toggleTeamForm()" class="add-btn">
+        <mat-icon>{{ showTeamForm() ? 'close' : 'add' }}</mat-icon>
+        {{ showTeamForm() ? 'Cancel' : 'New Team' }}
+      </button>
+
+      @if (showTeamForm()) {
+        <mat-card class="detail-card">
+          <form [formGroup]="teamForm" (ngSubmit)="submitTeam()" class="inline-form">
+            <mat-form-field appearance="outline">
+              <mat-label>Name</mat-label>
+              <input matInput formControlName="name" />
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="wide-field">
+              <mat-label>Description (optional)</mat-label>
+              <input matInput formControlName="description" />
+            </mat-form-field>
+            <button mat-raised-button color="primary" type="submit" [disabled]="isSaving()">
+              Create
+            </button>
+          </form>
+        </mat-card>
+      }
+
+      <div class="card-grid">
+        @for (team of teams(); track team.id) {
+          <mat-card class="entity-card">
+            <h3>{{ team.name }}</h3>
+            @if (team.description) {
+              <p class="entity-desc">{{ team.description }}</p>
+            }
+
+            <div class="member-list">
+              @for (member of team.members; track member.id) {
+                <span class="member-chip">
+                  {{ member.userName }}
+                  <mat-icon (click)="removeMember(member.id)">close</mat-icon>
+                </span>
+              } @empty {
+                <span class="meta-empty">No members yet.</span>
+              }
+            </div>
+
+            @if (addingMemberToTeamId() === team.id) {
+              <form [formGroup]="memberForm" (ngSubmit)="submitAddMember(team.id)" class="add-member-form">
+                <mat-form-field appearance="outline" class="wide-field">
+                  <mat-label>Select user</mat-label>
+                  <mat-select formControlName="userId">
+                    @for (user of allUsers(); track user.id) {
+                      <mat-option [value]="user.id">{{ user.fullName }} ({{ user.email }})</mat-option>
+                    }
+                  </mat-select>
+                </mat-form-field>
+                <button mat-raised-button color="primary" type="submit">Add</button>
+              </form>
+            }
+
+            <div class="entity-actions">
+              <button mat-button color="primary" (click)="toggleAddMember(team)">
+                <mat-icon>person_add</mat-icon> Add Member
+              </button>
+              <button mat-icon-button color="warn" (click)="deleteTeam(team)" aria-label="Delete team">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </div>
+          </mat-card>
+        } @empty {
+          <p class="meta-empty">No teams yet.</p>
+        }
+      </div>
+    }
+  }
+</div>

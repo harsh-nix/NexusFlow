@@ -38,6 +38,14 @@ export const routes: Routes = [
           ),
       },
       {
+        path: 'admin/organizations',
+        canActivate: [adminGuard],
+        loadComponent: () =>
+          import('./features/admin/admin-organizations/admin-organizations').then(
+            (m) => m.AdminOrganizationsComponent
+          ),
+      },
+      {
         path: 'my-tasks',
         loadComponent: () => import('./features/tasks/my-tasks/my-tasks').then((m) => m.MyTasksComponent),
       },

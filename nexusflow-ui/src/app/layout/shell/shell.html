@@ -27,17 +27,19 @@
           <mat-icon>admin_panel_settings</mat-icon>
           <span>Admin</span>
         </a>
-        @if (authService.currentUser()?.role === 'Admin') {
-        <a mat-button routerLink="/admin/users" routerLinkActive="nf-nav-link--active" class="nf-nav-link">
-          <mat-icon>admin_panel_settings</mat-icon>
-          <span>Admin</span>
-        </a>
         <a mat-button routerLink="/admin/audit-log" routerLinkActive="nf-nav-link--active" class="nf-nav-link">
           <mat-icon>history</mat-icon>
           <span>Audit Log</span>
         </a>
+        <a mat-button routerLink="/admin/organizations" routerLinkActive="nf-nav-link--active" class="nf-nav-link">
+          <mat-icon>corporate_fare</mat-icon>
+          <span>Organizations</span>
+        </a>
       }
-      }
+        <a mat-button routerLink="/admin/audit-log" routerLinkActive="nf-nav-link--active" class="nf-nav-link">
+          <mat-icon>history</mat-icon>
+          <span>Audit Log</span>
+        </a>
     </nav>
 
     <span class="nf-spacer"></span>

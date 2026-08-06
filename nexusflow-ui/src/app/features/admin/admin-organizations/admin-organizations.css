@@ -1,0 +1,135 @@
+.page-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--nf-space-5);
+}
+
+.page-header h1 {
+  margin: 4px 0 0 0;
+}
+
+.breadcrumb {
+  font-size: 0.8125rem;
+  color: var(--nf-ink-faint);
+  margin-top: 2px;
+}
+
+.breadcrumb a {
+  cursor: pointer;
+  color: var(--nf-ink-faint);
+  text-decoration: none;
+}
+
+.breadcrumb--active {
+  color: var(--nf-primary);
+  font-weight: 500;
+}
+
+.error-text {
+  color: #d32f2f;
+  font-size: 14px;
+}
+
+.success-text {
+  color: var(--nf-status-done);
+  font-size: 14px;
+}
+
+.page-loading {
+  text-align: center;
+  padding: var(--nf-space-7) 0;
+  color: var(--nf-ink-muted);
+}
+
+.add-btn {
+  align-self: flex-start;
+}
+
+.detail-card {
+  padding: var(--nf-space-4) !important;
+}
+
+.inline-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--nf-space-3);
+  align-items: flex-start;
+}
+
+.inline-form mat-form-field {
+  flex: 1;
+  min-width: 200px;
+}
+
+.wide-field {
+  flex-basis: 100%;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--nf-space-4);
+}
+
+.entity-card {
+  padding: var(--nf-space-4) !important;
+}
+
+.entity-desc {
+  font-size: 0.8125rem;
+  color: var(--nf-ink-muted);
+  margin: 4px 0;
+}
+
+.entity-meta {
+  display: flex;
+  gap: var(--nf-space-3);
+  font-size: 0.75rem;
+  color: var(--nf-ink-faint);
+  margin-bottom: var(--nf-space-2);
+}
+
+.entity-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--nf-space-2);
+}
+
+.member-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: var(--nf-space-2) 0;
+}
+
+.member-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  background: var(--nf-surface-alt);
+  border: 1px solid var(--nf-border);
+  border-radius: 999px;
+  padding: 2px 8px;
+}
+
+.member-chip mat-icon {
+  font-size: 14px;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  color: var(--nf-ink-faint);
+}
+
+.add-member-form {
+  display: flex;
+  gap: var(--nf-space-2);
+  align-items: center;
+  margin-bottom: var(--nf-space-2);
+}
+
+.meta-empty {
+  color: var(--nf-ink-faint);
+  font-size: 0.8125rem;
+}
