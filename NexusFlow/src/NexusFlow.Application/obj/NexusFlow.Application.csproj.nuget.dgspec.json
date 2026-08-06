@@ -64,6 +64,10 @@
               "target": "Package",
               "version": "[4.2.0, )"
             },
+            "ClosedXML": {
+              "target": "Package",
+              "version": "[0.104.2, )"
+            },
             "FluentValidation": {
               "target": "Package",
               "version": "[12.1.1, )"
@@ -71,6 +75,10 @@
             "FluentValidation.DependencyInjectionExtensions": {
               "target": "Package",
               "version": "[12.1.1, )"
+            },
+            "QuestPDF": {
+              "target": "Package",
+              "version": "[2025.7.0, )"
             }
           },
           "imports": [

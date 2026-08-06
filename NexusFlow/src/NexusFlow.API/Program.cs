@@ -1,3 +1,4 @@
+using QuestPDF.Infrastructure;
 using AutoMapper;
 using FluentValidation;
 using NexusFlow.API.Extensions;
@@ -7,6 +8,8 @@ using NexusFlow.Application.Mappings;
 using NexusFlow.Application.Services;
 using NexusFlow.Application.Services.Interfaces;
 using NexusFlow.Application.Validators.Auth;
+
+QuestPDF.Settings.License = QuestPDF.Infrastructure.LicenseType.Community;
 
 var builder = WebApplication.CreateBuilder(args);
 

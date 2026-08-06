@@ -3,34 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{549916D2-EBF7-32A2-5CBF-920253A0670C}|src\\NexusFlow.API\\NexusFlow.API.csproj|c:\\users\\harsh\\documents\\full_stack\\03_projects\\nexusflow\\nexusflow\\src\\nexusflow.api\\extensions\\serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{549916D2-EBF7-32A2-5CBF-920253A0670C}|src\\NexusFlow.API\\NexusFlow.API.csproj|solutionrelative:src\\nexusflow.api\\extensions\\serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{549916D2-EBF7-32A2-5CBF-920253A0670C}|src\\NexusFlow.API\\NexusFlow.API.csproj|c:\\users\\harsh\\documents\\full_stack\\03_projects\\nexusflow\\nexusflow\\src\\nexusflow.api\\controllers\\organizationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{549916D2-EBF7-32A2-5CBF-920253A0670C}|src\\NexusFlow.API\\NexusFlow.API.csproj|solutionrelative:src\\nexusflow.api\\controllers\\organizationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC3CEBF1-53E1-39FE-3F33-A3B083608876}|src\\NexusFlow.Application\\NexusFlow.Application.csproj|c:\\users\\harsh\\documents\\full_stack\\03_projects\\nexusflow\\nexusflow\\src\\nexusflow.application\\services\\organizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC3CEBF1-53E1-39FE-3F33-A3B083608876}|src\\NexusFlow.Application\\NexusFlow.Application.csproj|solutionrelative:src\\nexusflow.application\\services\\organizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC3CEBF1-53E1-39FE-3F33-A3B083608876}|src\\NexusFlow.Application\\NexusFlow.Application.csproj|c:\\users\\harsh\\documents\\full_stack\\03_projects\\nexusflow\\nexusflow\\src\\nexusflow.application\\services\\interfaces\\iorganizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC3CEBF1-53E1-39FE-3F33-A3B083608876}|src\\NexusFlow.Application\\NexusFlow.Application.csproj|solutionrelative:src\\nexusflow.application\\services\\interfaces\\iorganizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC3CEBF1-53E1-39FE-3F33-A3B083608876}|src\\NexusFlow.Application\\NexusFlow.Application.csproj|c:\\users\\harsh\\documents\\full_stack\\03_projects\\nexusflow\\nexusflow\\src\\nexusflow.application\\validators\\organizations\\teamvalidators.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC3CEBF1-53E1-39FE-3F33-A3B083608876}|src\\NexusFlow.Application\\NexusFlow.Application.csproj|solutionrelative:src\\nexusflow.application\\validators\\organizations\\teamvalidators.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC3CEBF1-53E1-39FE-3F33-A3B083608876}|src\\NexusFlow.Application\\NexusFlow.Application.csproj|c:\\users\\harsh\\documents\\full_stack\\03_projects\\nexusflow\\nexusflow\\src\\nexusflow.application\\validators\\organizations\\departmentvalidators.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC3CEBF1-53E1-39FE-3F33-A3B083608876}|src\\NexusFlow.Application\\NexusFlow.Application.csproj|solutionrelative:src\\nexusflow.application\\validators\\organizations\\departmentvalidators.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC3CEBF1-53E1-39FE-3F33-A3B083608876}|src\\NexusFlow.Application\\NexusFlow.Application.csproj|c:\\users\\harsh\\documents\\full_stack\\03_projects\\nexusflow\\nexusflow\\src\\nexusflow.application\\validators\\organizations\\organizationvalidators.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC3CEBF1-53E1-39FE-3F33-A3B083608876}|src\\NexusFlow.Application\\NexusFlow.Application.csproj|solutionrelative:src\\nexusflow.application\\validators\\organizations\\organizationvalidators.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CC3CEBF1-53E1-39FE-3F33-A3B083608876}|src\\NexusFlow.Application\\NexusFlow.Application.csproj|c:\\users\\harsh\\documents\\full_stack\\03_projects\\nexusflow\\nexusflow\\src\\nexusflow.application\\dtos\\organizations\\organizationdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC3CEBF1-53E1-39FE-3F33-A3B083608876}|src\\NexusFlow.Application\\NexusFlow.Application.csproj|solutionrelative:src\\nexusflow.application\\dtos\\organizations\\organizationdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -47,97 +19,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ServiceExtensions.cs",
-              "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.API\\Extensions\\ServiceExtensions.cs",
-              "RelativeDocumentMoniker": "src\\NexusFlow.API\\Extensions\\ServiceExtensions.cs",
-              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.API\\Extensions\\ServiceExtensions.cs",
-              "RelativeToolTip": "src\\NexusFlow.API\\Extensions\\ServiceExtensions.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAowGcAAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-06T11:30:47.336Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "OrganizationsController.cs",
-              "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.API\\Controllers\\OrganizationsController.cs",
-              "RelativeDocumentMoniker": "src\\NexusFlow.API\\Controllers\\OrganizationsController.cs",
-              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.API\\Controllers\\OrganizationsController.cs",
-              "RelativeToolTip": "src\\NexusFlow.API\\Controllers\\OrganizationsController.cs",
-              "ViewState": "AgIAAHIAAAAAAAAAAAAqwHwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-06T11:30:28.019Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "OrganizationService.cs",
-              "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Services\\OrganizationService.cs",
-              "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Services\\OrganizationService.cs",
-              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Services\\OrganizationService.cs",
-              "RelativeToolTip": "src\\NexusFlow.Application\\Services\\OrganizationService.cs",
-              "ViewState": "AgIAAIMBAAAAAAAAAAAkwI8BAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-06T11:29:50.913Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IOrganizationService.cs",
-              "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Services\\Interfaces\\IOrganizationService.cs",
-              "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Services\\Interfaces\\IOrganizationService.cs",
-              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Services\\Interfaces\\IOrganizationService.cs",
-              "RelativeToolTip": "src\\NexusFlow.Application\\Services\\Interfaces\\IOrganizationService.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAwBkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-06T11:29:24.732Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TeamValidators.cs",
-              "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Validators\\Organizations\\TeamValidators.cs",
-              "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Validators\\Organizations\\TeamValidators.cs",
-              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Validators\\Organizations\\TeamValidators.cs",
-              "RelativeToolTip": "src\\NexusFlow.Application\\Validators\\Organizations\\TeamValidators.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-06T11:28:41.842Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DepartmentValidators.cs",
-              "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Validators\\Organizations\\DepartmentValidators.cs",
-              "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Validators\\Organizations\\DepartmentValidators.cs",
-              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Validators\\Organizations\\DepartmentValidators.cs",
-              "RelativeToolTip": "src\\NexusFlow.Application\\Validators\\Organizations\\DepartmentValidators.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-06T11:28:23.654Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "OrganizationValidators.cs",
-              "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Validators\\Organizations\\OrganizationValidators.cs",
-              "RelativeDocumentMoniker": "src\\NexusFlow.Application\\Validators\\Organizations\\OrganizationValidators.cs",
-              "ToolTip": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\Validators\\Organizations\\OrganizationValidators.cs",
-              "RelativeToolTip": "src\\NexusFlow.Application\\Validators\\Organizations\\OrganizationValidators.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-06T11:28:03.429Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "OrganizationDtos.cs",
               "DocumentMoniker": "C:\\Users\\Harsh\\Documents\\Full_Stack\\03_Projects\\NexusFlow\\NexusFlow\\src\\NexusFlow.Application\\DTOs\\Organizations\\OrganizationDtos.cs",
               "RelativeDocumentMoniker": "src\\NexusFlow.Application\\DTOs\\Organizations\\OrganizationDtos.cs",
