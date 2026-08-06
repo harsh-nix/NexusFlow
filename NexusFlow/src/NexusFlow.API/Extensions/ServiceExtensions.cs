@@ -102,6 +102,7 @@ namespace NexusFlow.API.Extensions
             services.AddScoped<ISubTaskService, SubTaskService>();
             services.AddScoped<IFileService, FileService>();
             services.AddScoped<IOrganizationService, OrganizationService>();
+            services.AddScoped<IReportService, ReportService>();
         }
     }
 }
