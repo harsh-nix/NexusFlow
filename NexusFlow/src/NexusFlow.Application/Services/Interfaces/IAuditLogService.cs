@@ -1,4 +1,5 @@
-﻿using NexusFlow.Application.DTOs.Tasks;
+﻿using NexusFlow.Application.DTOs.AuditLogs;
+using NexusFlow.Application.DTOs.Tasks;
 
 namespace NexusFlow.Application.Services.Interfaces
 {
@@ -10,5 +11,8 @@ namespace NexusFlow.Application.Services.Interfaces
 
         Task<List<TaskActivityDto>> GetActivityForEntityAsync(
             string entityName, int entityId);
+
+        Task<PagedAuditLogResult> GetAllAsync(
+            string? entityName, string? action, int page, int pageSize);
     }
 }

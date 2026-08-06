@@ -2,6 +2,7 @@
 using NexusFlow.Application.Services.Interfaces;
 using NexusFlow.Domain.Entities;
 using NexusFlow.Domain.Interfaces;
+using NexusFlow.Application.DTOs.AuditLogs;
 
 namespace NexusFlow.Application.Services
 {
@@ -58,6 +59,57 @@ namespace NexusFlow.Application.Services
             }
 
             return result;
+        }
+        public async Task<PagedAuditLogResult> GetAllAsync(
+            string? entityName, string? action, int page, int pageSize)
+        {
+            var logs = await _unitOfWork.Repository<AuditLog>().GetAllAsync();
+
+            var filtered = logs.AsEnumerable();
+
+            if (!string.IsNullOrWhiteSpace(entityName))
+                filtered = filtered.Where(a =>
+                    a.EntityName.Equals(entityName, StringComparison.OrdinalIgnoreCase));
+
+            if (!string.IsNullOrWhiteSpace(action))
+                filtered = filtered.Where(a =>
+                    a.Action.Equals(action, StringComparison.OrdinalIgnoreCase));
+
+            var ordered = filtered.OrderByDescending(a => a.CreatedAt).ToList();
+            var totalCount = ordered.Count;
+
+            var pageItems = ordered
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToList();
+
+            var items = new List<AuditLogDto>();
+            foreach (var log in pageItems)
+            {
+                var users = await _unitOfWork.Repository<User>()
+                    .FindAsync(u => u.Id == log.UserId);
+
+                items.Add(new AuditLogDto
+                {
+                    Id = log.Id,
+                    EntityName = log.EntityName,
+                    EntityId = log.EntityId,
+                    Action = log.Action,
+                    OldValue = log.OldValue,
+                    NewValue = log.NewValue,
+                    UserId = log.UserId,
+                    UserName = users.FirstOrDefault()?.FullName ?? "Unknown",
+                    CreatedAt = log.CreatedAt
+                });
+            }
+
+            return new PagedAuditLogResult
+            {
+                Items = items,
+                TotalCount = totalCount,
+                Page = page,
+                PageSize = pageSize
+            };
         }
     }
 }
