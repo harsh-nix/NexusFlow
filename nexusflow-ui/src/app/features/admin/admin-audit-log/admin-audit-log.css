@@ -1,0 +1,90 @@
+.page-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--nf-space-5);
+}
+
+.page-header h1 {
+  margin: 4px 0 0 0;
+}
+
+.error-text {
+  color: #d32f2f;
+  font-size: 14px;
+}
+
+.page-loading {
+  text-align: center;
+  padding: var(--nf-space-7) 0;
+  color: var(--nf-ink-muted);
+}
+
+.detail-card {
+  padding: var(--nf-space-4) !important;
+}
+
+.filters-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--nf-space-3);
+  flex-wrap: wrap;
+}
+
+.filter-field {
+  min-width: 200px;
+}
+
+.log-table {
+  display: flex;
+  flex-direction: column;
+}
+
+.log-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1.2fr 1.2fr 2fr 1fr;
+  gap: var(--nf-space-3);
+  padding: var(--nf-space-2) 0;
+  border-bottom: 1px solid var(--nf-border);
+  font-size: 0.8125rem;
+  align-items: center;
+}
+
+.log-row--header {
+  font-weight: 600;
+  color: var(--nf-ink-muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.log-date {
+  color: var(--nf-ink-faint);
+}
+
+.log-action {
+  color: var(--nf-primary);
+  font-weight: 500;
+}
+
+.log-change {
+  color: var(--nf-ink-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.meta-empty {
+  color: var(--nf-ink-faint);
+  font-size: 0.8125rem;
+  padding: var(--nf-space-4) 0;
+}
+
+.pagination-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--nf-space-3);
+  margin-top: var(--nf-space-3);
+  font-size: 0.8125rem;
+  color: var(--nf-ink-muted);
+}

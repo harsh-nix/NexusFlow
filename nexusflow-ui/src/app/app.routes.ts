@@ -30,6 +30,14 @@ export const routes: Routes = [
           import('./features/admin/admin-users/admin-users').then((m) => m.AdminUsersComponent),
       },
       {
+        path: 'admin/audit-log',
+        canActivate: [adminGuard],
+        loadComponent: () =>
+          import('./features/admin/admin-audit-log/admin-audit-log').then(
+            (m) => m.AdminAuditLogComponent
+          ),
+      },
+      {
         path: 'my-tasks',
         loadComponent: () => import('./features/tasks/my-tasks/my-tasks').then((m) => m.MyTasksComponent),
       },

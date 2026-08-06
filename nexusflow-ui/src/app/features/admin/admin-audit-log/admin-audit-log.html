@@ -1,0 +1,92 @@
+<div class="page-container">
+  <div class="page-header">
+    <div>
+      <h1>Audit Log</h1>
+      <p>Every recorded action across tasks, users, and projects.</p>
+    </div>
+  </div>
+
+  <mat-card class="detail-card filters-card">
+    <mat-form-field appearance="outline" class="filter-field">
+      <mat-label>Entity</mat-label>
+      <mat-select [(ngModel)]="entityNameFilter" (selectionChange)="applyFilters()">
+        <mat-option value="">All</mat-option>
+        @for (entity of entityOptions; track entity) {
+          <mat-option [value]="entity">{{ entity }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="filter-field">
+      <mat-label>Action contains</mat-label>
+      <input
+        matInput
+        [(ngModel)]="actionFilter"
+        (keyup.enter)="applyFilters()"
+        placeholder="e.g. Accepted, Deleted"
+      />
+    </mat-form-field>
+
+    <button mat-stroked-button (click)="applyFilters()">
+      <mat-icon>filter_alt</mat-icon>
+      Apply
+    </button>
+  </mat-card>
+
+  @if (errorMessage()) {
+    <p class="error-text">{{ errorMessage() }}</p>
+  }
+
+  @if (isLoading()) {
+    <div class="page-loading">
+      <p>Loading audit log...</p>
+    </div>
+  } @else {
+    <mat-card class="detail-card">
+      <div class="log-table">
+        <div class="log-row log-row--header">
+          <span>When</span>
+          <span>Entity</span>
+          <span>Action</span>
+          <span>Change</span>
+          <span>By</span>
+        </div>
+
+        @for (log of logs(); track log.id) {
+          <div class="log-row">
+            <span class="log-date">{{ log.createdAt | date: 'short' }}</span>
+            <span>{{ log.entityName }} #{{ log.entityId }}</span>
+            <span class="log-action">{{ log.action }}</span>
+            <span class="log-change">
+              @if (log.oldValue && log.newValue) {
+                {{ log.oldValue }} → {{ log.newValue }}
+              } @else if (log.newValue) {
+                {{ log.newValue }}
+              } @else {
+                —
+              }
+            </span>
+            <span>{{ log.userName }}</span>
+          </div>
+        } @empty {
+          <p class="meta-empty">No audit entries match these filters.</p>
+        }
+      </div>
+
+      <div class="pagination-row">
+        <button mat-icon-button [disabled]="page <= 1" (click)="previousPage()" aria-label="Previous page">
+          <mat-icon>chevron_left</mat-icon>
+        </button>
+        <span>Page {{ page }} of {{ totalPages }} — {{ totalCount() }} entries</span>
+        <button
+          mat-icon-button
+          [disabled]="page * pageSize >= totalCount()"
+          (click)="nextPage()"
+          aria-label="Next page"
+        >
+          <mat-icon>chevron_right</mat-icon>
+        </button>
+      </div>
+    </mat-card>
+  }
+</div>
