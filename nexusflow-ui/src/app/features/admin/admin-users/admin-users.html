@@ -1,0 +1,125 @@
+<div class="page-container">
+  <div class="page-header">
+    <div>
+      <h1>User Management</h1>
+      <p>Create accounts, change roles, and activate or deactivate users.</p>
+    </div>
+    <button mat-raised-button color="primary" (click)="toggleCreateForm()">
+      <mat-icon>{{ showCreateForm() ? 'close' : 'person_add' }}</mat-icon>
+      {{ showCreateForm() ? 'Cancel' : 'New User' }}
+    </button>
+  </div>
+
+  @if (errorMessage()) {
+    <p class="error-text">{{ errorMessage() }}</p>
+  }
+  @if (successMessage()) {
+    <p class="success-text">{{ successMessage() }}</p>
+  }
+
+  @if (showCreateForm()) {
+    <mat-card class="detail-card">
+      <h3>New User</h3>
+      <form [formGroup]="createForm" (ngSubmit)="submitCreate()" class="user-form">
+        <mat-form-field appearance="outline">
+          <mat-label>Full Name</mat-label>
+          <input matInput formControlName="fullName" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" formControlName="email" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" formControlName="password" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Role</mat-label>
+          <mat-select formControlName="role">
+            @for (role of roles; track role) {
+              <mat-option [value]="role">{{ role }}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Phone (optional)</mat-label>
+          <input matInput formControlName="phoneNumber" />
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit" [disabled]="isSaving()">
+          @if (isSaving()) { Creating... } @else { Create User }
+        </button>
+      </form>
+    </mat-card>
+  }
+
+  @if (isLoading()) {
+    <div class="page-loading">
+      <p>Loading users...</p>
+    </div>
+  } @else {
+    <mat-card class="detail-card">
+      <div class="user-table">
+        <div class="user-row user-row--header">
+          <span>Name</span>
+          <span>Email</span>
+          <span>Role</span>
+          <span>Status</span>
+          <span>Actions</span>
+        </div>
+
+        @for (user of users(); track user.id) {
+          <div class="user-row">
+            @if (editingUserId() === user.id) {
+              <form [formGroup]="editForm" (ngSubmit)="submitEdit(user.id)" class="user-edit-form">
+                <input matInput [formControl]="$any(editForm.get('fullName'))" class="edit-input" />
+                <span class="user-email">{{ user.email }}</span>
+                <mat-select [formControl]="$any(editForm.get('role'))" class="edit-select">
+                  @for (role of roles; track role) {
+                    <mat-option [value]="role">{{ role }}</mat-option>
+                  }
+                </mat-select>
+                <span class="status-pill" [class.status-pill--inactive]="!user.isActive">
+                  {{ user.isActive ? 'Active' : 'Inactive' }}
+                </span>
+                <span class="row-actions">
+                  <button mat-icon-button color="primary" type="submit" [disabled]="isSaving()" aria-label="Save">
+                    <mat-icon>check</mat-icon>
+                  </button>
+                  <button mat-icon-button type="button" (click)="cancelEdit()" aria-label="Cancel">
+                    <mat-icon>close</mat-icon>
+                  </button>
+                </span>
+              </form>
+            } @else {
+              <span>{{ user.fullName }}</span>
+              <span class="user-email">{{ user.email }}</span>
+              <span>{{ user.role }}</span>
+              <span class="status-pill" [class.status-pill--inactive]="!user.isActive">
+                {{ user.isActive ? 'Active' : 'Inactive' }}
+              </span>
+              <span class="row-actions">
+                <button mat-icon-button (click)="startEdit(user)" aria-label="Edit user">
+                  <mat-icon>edit</mat-icon>
+                </button>
+                <button
+                  mat-icon-button
+                  [color]="user.isActive ? 'warn' : 'primary'"
+                  [disabled]="user.id === currentUserId"
+                  (click)="toggleActiveStatus(user)"
+                  [attr.aria-label]="user.isActive ? 'Deactivate user' : 'Activate user'"
+                >
+                  <mat-icon>{{ user.isActive ? 'block' : 'check_circle' }}</mat-icon>
+                </button>
+              </span>
+            }
+          </div>
+        }
+      </div>
+    </mat-card>
+  }
+</div>
